@@ -5,5 +5,23 @@
 @import 'bootstrap/scss/bootstrap';
 
 body {
-  font-family: 'Castoro Titling', cursive;
+  font-family: 'Unna', serif!important;
+  background-color: black!important;
+}
+
+.mainContainer {
+  width: 100%;
+  color: white!important;
+
+  .homeTitle {
+    padding: 25px, 30px!important;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .hpDescription {
+    padding: 25px, 30px!important;
+    font-size: 16px;
+    text-align: justify!important;
+  }
 }
