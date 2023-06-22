@@ -5,6 +5,8 @@
 @import 'bootstrap/scss/bootstrap';
 
 body {
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: 'Unna', serif!important;
   background-color: black!important;
 }
@@ -17,10 +19,39 @@ body {
   .homeTitle {
     font-size: 30px;
     font-weight: bold;
+    text-shadow: 0.5px 0.5px grey;
   }
 
   .hpDescription {
     font-size: 16px;
     text-align: justify!important;
+  }
+}
+
+.carousel {
+  .carousel-inner {
+    margin-top: 1px!important;
+  }
+
+  .carousel-caption {
+    h3 {
+      font-family: 'Tulpen One', cursive;
+      font-size: 40px;
+      text-shadow: black 2px 3px 3px;
+    }
+  }
+
+  // .carousel-control-next-icon {
+  //   width: 4rem;
+  //   height: 4rem;
+  //   border-color: rgba(255, 255, 255, 0.26);
+  //   border-radius: 50%;
+  // }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(255, 255, 255, 0.26);
+    border-radius: 50%;
   }
 }

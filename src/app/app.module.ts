@@ -7,13 +7,15 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
