@@ -4,3 +4,22 @@
   height: 120%;
   text-align: center!important;
 }
+
+.carousel {
+  .carousel-inner {
+    margin-top: 1px!important;
+  }
+
+  .carousel-caption {
+    h3 {
+      font-family: 'Tulpen One', cursive;
+      font-size: 40px;
+      text-shadow: black 2px 3px 3px;
+    }
+  }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}

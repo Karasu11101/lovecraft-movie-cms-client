@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class CarouselComponent {
   percorso = '../assets/images/movie-';
   images = [
-    {id: 1, label: 'Color out of Space'},
-    {id: 2, label: 'Cthulhu'},
-    {id: 3, label: 'Shadow of the Unnamable'},
+    {id: 1, label: 'Shadow of the Unnamable'},
+    {id: 2, label: 'Pickman\'s Muse'},
+    {id: 3, label: 'Color out of Space'},
     {id: 4, label: 'The Deep Ones'},
-    {id: 5, label: 'The Dunwich Horror'},
+    {id: 5, label: 'The Call of Cthulhu'},
   ]
 }

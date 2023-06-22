@@ -11,16 +11,15 @@ body {
 
 .mainContainer {
   width: 100%;
-  color: white!important;
+  color: white;
+  padding: 25px;
 
   .homeTitle {
-    padding: 25px, 30px!important;
     font-size: 30px;
     font-weight: bold;
   }
 
   .hpDescription {
-    padding: 25px, 30px!important;
     font-size: 16px;
     text-align: justify!important;
   }

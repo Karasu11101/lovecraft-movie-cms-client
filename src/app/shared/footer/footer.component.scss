@@ -1,9 +1,29 @@
 footer {
   background-color: #1c251c!important;
   color: black;
+  // .title-footer {
+  //   font-family: 'Tulpen One', cursive!important;
+  //   font-size: 60px;
+  //   padding-right: 30px;
+  // }
 
-  .logo {
-    width: 120px;
+  // .logo {
+  //   height: 140px;
+  // }
+
+  .left {
+    font-size: 30px;
+    padding-left: 30px;
+    padding-top: 20px;
+  }
+
+  .right {
+    text-align: right;
+
+    .logo {
+      height: 140px;
+      padding-right: 20px;
+    }
   }
 
 }
