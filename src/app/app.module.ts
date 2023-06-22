@@ -8,6 +8,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     HeaderComponent,
     FooterComponent,
     CarouselComponent,
-    SidebarComponent
+    SidebarComponent,
+    NotfoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

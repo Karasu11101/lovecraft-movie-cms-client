@@ -2,28 +2,31 @@ footer {
   background-color: #1c251c!important;
   color: black;
   text-shadow: 0.2px 0.2px grey;
-  // .title-footer {
-  //   font-family: 'Tulpen One', cursive!important;
-  //   font-size: 60px;
-  //   padding-right: 30px;
-  // }
 
-  // .logo {
-  //   height: 140px;
-  // }
+  .column {
+  float: left;
+  padding: 10px;
+  white-space: nowrap!important;
 
-  .left {
-    font-size: 30px;
-    padding-left: 30px;
-    padding-top: 20px;
-  }
+    .middle {
+      text-align: center;
+      white-space: nowrap;
 
-  .right {
-    text-align: right;
+      .logo {
+        height: 120px;
+      }
+    }
 
-    .logo {
-      height: 140px;
-      padding-right: 20px;
+    .left {
+      white-space: nowrap;
+      font-size: 30px;
+      padding-left: 30px;
+      padding-top: 20px;
+    }
+
+    .right {
+      white-space: nowrap;
+      text-align: right;
     }
   }
 
