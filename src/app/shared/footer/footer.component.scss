@@ -1,33 +1,86 @@
-footer {
+.bg-darker {
   background-color: #1c251c!important;
+  font-size: 60px;
   color: black;
   text-shadow: 0.2px 0.2px grey;
-
-  .column {
-  float: left;
-  padding: 10px;
-  white-space: nowrap!important;
-
-    .middle {
-      text-align: center;
-      white-space: nowrap;
-
-      .logo {
-        height: 120px;
-      }
-    }
-
-    .left {
-      white-space: nowrap;
-      font-size: 30px;
-      padding-left: 30px;
-      padding-top: 20px;
-    }
-
-    .right {
-      white-space: nowrap;
-      text-align: right;
-    }
-  }
-
+  width: 100%;
+  height: 400px;
 }
+.column {
+  float: left;
+  font-weight: bolder;
+  font-family: 'Tulpen One', cursive;
+  // white-space: nowrap!important;
+}
+
+.middle {
+  text-align: center;
+  width: 50%;
+  padding-top: 30px;
+  white-space: nowrap!important;
+  .logo {
+    height: 180px;
+    }
+}
+
+.left {
+  padding-left: 30px;
+  padding-top: 30px;
+  width: 25%;
+  white-space: nowrap!important;
+}
+
+.right {
+  text-align: center;
+  width: 25%;
+  padding-top: 30px;
+  padding-right: 30px;
+  white-space: nowrap;
+  text-shadow: 0.3px 0.3px grey;
+}
+
+// }
+// .bg-darker {
+//   background-color: #1c251c!important;
+// }
+
+// .column {
+//   float: left;
+//   padding: 10px;
+//   height: 150px;
+//   white-space: nowrap;
+// }
+
+// .left {
+//   width: 25%;
+//   text-align: left;
+
+//   .logo {
+//     height: 140px;
+//     padding-bottom: 10px;
+//   }
+// }
+
+// .right {
+//   width: 25%;
+//   color: black;
+//   text-align: right;
+//   padding: 40px;
+//   text-shadow: 0.4px 0.4px grey;
+
+//   .insta, .discord {
+//     padding-right: 30px;
+//     font-size: 40px;
+//   }
+
+//   .twitter {
+//     padding-right: 5px;
+//     font-size: 40px;
+//   }
+// }
+
+// .middle {
+//   white-space: nowrap;
+//   width: 50%;
+//   text-align: center;
+// }
