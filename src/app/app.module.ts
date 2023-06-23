@@ -7,9 +7,10 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { HomeComponent } from './components/home/home.component';
+import { MovieCardComponent } from './shared/movie-card/movie-card.component';
+import { MoviesComponent } from './components/movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,10 @@ import { HomeComponent } from './components/home/home.component';
     HeaderComponent,
     FooterComponent,
     CarouselComponent,
-    SidebarComponent,
     NotfoundComponent,
-    HomeComponent
+    HomeComponent,
+    MovieCardComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,

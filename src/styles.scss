@@ -3,6 +3,7 @@
 @import "primeicons/primeicons.css";
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+@import './app/styles/colors.scss';
 
 body {
   max-width: 100%;
@@ -31,6 +32,10 @@ body {
 .carousel {
   .carousel-inner {
     margin-top: 1px!important;
+  }
+
+  .carousel-title {
+    clear: both;
   }
 
   .carousel-caption {

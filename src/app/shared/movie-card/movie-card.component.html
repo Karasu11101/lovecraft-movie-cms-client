@@ -1,0 +1,13 @@
+<div id="contenitoreCards">
+  <div class="container-card" *ngFor="let movie of movies">
+    <div class="card">
+      <div class="card-image" [ngStyle]="{'background-image': 'url(' + movie.image + ')'}"></div>
+      <div class="card-body">
+        <h5 class="card-title">{{movie.title}} - cod: {{movie._id}}</h5>
+        <p class="card-text">{{movie.description}}</p>
+        <a routerLink="/dettaglio/{{movie._id}}" class="btn btn-primary">Visualizza</a>
+        <!-- <a [routerLink]="'dettaglio/'+recipe._id" class="btn btn-primary">Visualizza</a> -->
+      </div>
+    </div>
+  </div>
+</div>
