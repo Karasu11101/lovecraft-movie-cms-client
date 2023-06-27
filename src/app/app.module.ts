@@ -11,6 +11,8 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { HomeComponent } from './components/home/home.component';
 import { MovieCardComponent } from './shared/movie-card/movie-card.component';
 import { MoviesComponent } from './components/movies/movies.component';
+import { DetailComponent } from './components/movies/detail/detail.component';
+import { MoviesListComponent } from './components/movies/movies-list/movies-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { MoviesComponent } from './components/movies/movies.component';
     NotfoundComponent,
     HomeComponent,
     MovieCardComponent,
-    MoviesComponent
+    MoviesComponent,
+    DetailComponent,
+    MoviesListComponent
   ],
   imports: [
     BrowserModule,

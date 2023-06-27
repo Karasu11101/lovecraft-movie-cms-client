@@ -1,10 +1,11 @@
 @import "../../styles/colors.scss";
 
 .bg-darker {
-  background-color: #1c251c!important;
+  background-color: $primary-color-2;
 }
 
 .column {
+
   float: left;
   padding: 10px;
   height: 150px;
@@ -14,14 +15,27 @@
 .left {
   width: 25%;
   text-align: left;
-  .hp {
-    padding-left: 20px;
-    color: $secondary-color-1;
-    text-shadow: 0.5px 0.5px $secondary-color-5;
+  margin-top: 20px;
+
+  .links {
+    white-space: nowrap;
+
+    .homeLink, .bookLink, .movieLink {
+      font-family: 'Tulpen One', cursive!important;
+      padding-left: 15px;
+      cursor: pointer;
+      text-decoration: none;
+      color: $secondary-color-1;
+      text-shadow: 0.5px 0.5px grey;
+      font-size: 60px;
+      font-weight: 900;
+      vertical-align: middle;
+    }
   }
   .logo {
-    height: 140px;
-    padding-bottom: 10px;
+    vertical-align: middle;
+    height: 100px;
+    padding-left: 10px;
   }
 }
 
@@ -29,7 +43,7 @@
   width: 25%;
   color: black;
   text-align: right;
-  padding: 40px;
+  padding-top: 60px;
   text-shadow: 0.4px 0.4px grey;
 
   .insta, .discord {
@@ -38,24 +52,25 @@
   }
 
   .twitter {
-    padding-right: 5px;
+    padding-right: 10px;
     font-size: 40px;
   }
 }
 
 .middle {
-  white-space: nowrap;
+  // white-space: nowrap;
   width: 50%;
   text-align: center;
 
   .title {
+    // width: 50%;
     font-family: 'Tulpen One', cursive!important;
-    font-size: 110px;
+    font-size: 140px;
     font-weight: bold;
-    color: black;
-    // padding-right: 30px;
-    // padding-left: 10px;
-    padding-bottom: 20px;
+    color: $secondary-color-1;
     text-shadow: 0.5px 0.5px grey;
+    vertical-align: text-bottom!important;
+    padding-bottom: 60px;
+    text-align: center;
   }
 }

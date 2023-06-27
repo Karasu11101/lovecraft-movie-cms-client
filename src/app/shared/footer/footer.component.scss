@@ -1,5 +1,7 @@
+@import "../../styles/colors.scss";
+
 .bg-darker {
-  background-color: #1c251c!important;
+  background-color: $primary-color-2;
   font-size: 60px;
   color: black;
   text-shadow: 0.2px 0.2px grey;
@@ -38,49 +40,3 @@
   white-space: nowrap;
   text-shadow: 0.3px 0.3px grey;
 }
-
-// }
-// .bg-darker {
-//   background-color: #1c251c!important;
-// }
-
-// .column {
-//   float: left;
-//   padding: 10px;
-//   height: 150px;
-//   white-space: nowrap;
-// }
-
-// .left {
-//   width: 25%;
-//   text-align: left;
-
-//   .logo {
-//     height: 140px;
-//     padding-bottom: 10px;
-//   }
-// }
-
-// .right {
-//   width: 25%;
-//   color: black;
-//   text-align: right;
-//   padding: 40px;
-//   text-shadow: 0.4px 0.4px grey;
-
-//   .insta, .discord {
-//     padding-right: 30px;
-//     font-size: 40px;
-//   }
-
-//   .twitter {
-//     padding-right: 5px;
-//     font-size: 40px;
-//   }
-// }
-
-// .middle {
-//   white-space: nowrap;
-//   width: 50%;
-//   text-align: center;
-// }

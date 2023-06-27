@@ -1,0 +1,62 @@
+@import "../../../styles/colors.scss";
+
+#dettaglio-film {
+  background-color: $primary-color-2;
+  .dettaglio-image {
+    clear: both;
+    margin-top: 1px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .dettaglio-body {
+    padding: 20px;
+    background-color: $secondary-color-1;
+
+    .dettaglio-title {
+      // padding: 20px;
+      font-weight: bold;
+      font-size: 40px;
+      color: $secondary-color-5;
+      padding-bottom: 10px;
+    }
+
+    .dettaglio-text {
+      // padding: 20px;
+      text-align: justify;
+      color: $secondary-color-5;
+    }
+
+  }
+}
+
+
+// .dettaglio-film {
+//   background-color: $secondary-color-1;
+
+//   .dettaglio-image {
+//     margin-top: 1px;
+//     height: 400px;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//   }
+
+//   .dettaglio-body {
+//     padding: 30px 30px;
+
+//     .dettaglio-title {
+//       font-weight: bold;
+//       font-size: 20px;
+//       color: $secondary-color-5;
+//       padding-bottom: 10px;
+//     }
+
+//     .dettaglio-text {
+//       text-align: justify;
+//       color: $secondary-color-5;
+//     }
+//   }
+// }

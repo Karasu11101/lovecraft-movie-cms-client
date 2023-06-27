@@ -1,0 +1,11 @@
+<div id="dettaglio-film" *ngIf="movie">
+  <div class="dettaglio-image" [ngStyle]="{'background-image': 'url(' + movie.image + ')'}"></div>
+  <div class="dettaglio-body">
+    <h5 class="dettaglio-title">{{movie.title}}</h5>
+    <p class="dettaglio-text">{{movie.description}}</p>
+  </div>
+</div>
+
+<div *ngIf="movie === undefined || !movie">
+  <div>Siamo spiacenti, ma la ricetta cercata non si trova più qui</div>
+</div>
