@@ -1,0 +1,61 @@
+<div class="contenitore">
+  <div class="colonna-sinistra">
+
+    <p class="testo-centro-colsx">Sign-up</p>
+
+    <form class="registration-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <div class="username-box">
+        <i class="pi pi-user-edit"></i>
+        <input placeholder="username" type="text" id="username" name="username" formControlName="username" class="form-control"/>
+        <p class="help is-danger" *ngIf="form.controls.username.hasError('required') && form.controls.username.touched">Username required</p>
+      </div>
+
+      <div class="name-box">
+        <i class="pi pi-user"></i>
+        <input placeholder="name" type="text" id="name" name="name" formControlName="name" class="form-control"/>
+        <p class="help is-danger" *ngIf="form.controls.name.hasError('required') && form.controls.name.touched">Name required</p>
+      </div>
+
+      <div class="email-box">
+        <i class="pi pi-envelope"></i>
+        <input placeholder="email" type="text" id="email" name="email" formControlName="email" class="form-control"/>
+        <p class="help is-danger" *ngIf="form.controls.email.hasError('required') && form.controls.email.touched">Email required</p>
+        <p class="help is-danger" *ngIf="form.controls.email.hasError('email') && form.controls.email.touched">Insert a valid email address</p>
+      </div>
+
+      <div class="birthdate-box">
+        <i class="pi pi-calendar"></i>
+        <input placeholder="birthdate" type="date" id="birthdate" name="birthdate" formControlName="birthdate" class="form-control"
+        min="1900-01-01" max="2005-12-31"/>
+      </div>
+
+      <div class="password-box">
+        <i class="pi pi-key"></i>
+        <input placeholder="password" type="password" id="password" name="password" formControlName="password" class="form-control"/>
+        <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && form.controls.password.touched">Password required</p>
+        <p class="help is-danger" *ngIf="form.controls.password.hasError('minLength') && form.controls.password.touched">Password must be at least 8 characters long</p>
+        <p class="help is-danger" *ngIf="form.controls.password.hasError('maxLength') && form.controls.password.touched">Password can contain max 16 characters</p>
+        <p class="help is-danger" *ngIf="form.controls.password.hasError('pattern') && form.controls.password.touched">Password must contain lowercase and uppercase letters, a number and at least a special character</p>
+      </div>
+
+      <div class="repeatPassword-box">
+        <input placeholder="ripetiPassword" type="password" id="ripetiPassword" name="ripetiPassword" formControlName="ripetiPassword" class="form-control"/>
+        <p class="help is-danger" *ngIf="form.get('password') !== form.get('ripetiPassword') && form.controls.ripetiPassword.touched">Password does not match</p>
+      </div>
+
+      <div class="accept-box">
+        <input placeholder="accetto" type="checkbox" id="accetto" name="accetto" formControlName="accetto" class="form-control"/>
+        <label class="accetto-label" for="accetto">
+          Dichiaro di accettare i <a>Termini del servizio</a>
+        </label>
+      </div>
+
+      <div class="register-button">
+        <button type="submit" class="btn btn-primary btn-lg" [disabled]="!form.valid">Registrati</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

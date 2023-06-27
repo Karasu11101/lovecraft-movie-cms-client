@@ -30,6 +30,13 @@ body {
 }
 
 .carousel {
+
+  .moviePoster {
+    margin: auto;
+    width: 100%!important;
+    height: 120%!important;
+    text-align: center!important;
+  }
   .carousel-inner {
     margin-top: 1px!important;
   }

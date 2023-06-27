@@ -6,6 +6,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { DetailComponent } from './components/movies/detail/detail.component';
 import { MoviesListComponent } from './components/movies/movies-list/movies-list.component';
+import { RegistrationComponent } from './components/user/registration/registration.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -14,6 +15,7 @@ const routes: Routes = [
     { path: 'dettaglio/:title/:_id', component: DetailComponent},
     { path: '', component: MoviesListComponent, pathMatch: 'full'}
   ]},
+  { path: 'signUp', component: RegistrationComponent},
   { path: '404', component: NotfoundComponent},
   { path: '**', redirectTo: '404', pathMatch: 'full'},
 ];

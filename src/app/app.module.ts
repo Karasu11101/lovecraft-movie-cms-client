@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { MovieCardComponent } from './shared/movie-card/movie-card.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { DetailComponent } from './components/movies/detail/detail.component';
 import { MoviesListComponent } from './components/movies/movies-list/movies-list.component';
+import { RegistrationComponent } from './components/user/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,15 @@ import { MoviesListComponent } from './components/movies/movies-list/movies-list
     MovieCardComponent,
     MoviesComponent,
     DetailComponent,
-    MoviesListComponent
+    MoviesListComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
