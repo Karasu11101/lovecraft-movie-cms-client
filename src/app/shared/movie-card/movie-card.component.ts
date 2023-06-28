@@ -18,4 +18,14 @@ export class MovieCardComponent {
       return ultimoSpazio;
     }
   }
+
+  accorciaTitolo(titolo: string): number {
+    let lunghezzaMassima = 18;
+    if(titolo.length <= lunghezzaMassima) {
+      return lunghezzaMassima;
+    } else {
+      let ultimoSpazio = titolo.lastIndexOf(' ', lunghezzaMassima);
+      return ultimoSpazio;
+    }
+  }
 }

@@ -20,14 +20,14 @@
   .links {
     white-space: nowrap;
 
-    .homeLink, .bookLink, .movieLink, .signUpLink {
+    .homeLink, .bookLink, .movieLink, .registrationLink {
       font-family: 'Tulpen One', cursive!important;
       padding-left: 15px;
       cursor: pointer;
       text-decoration: none;
       color: $secondary-color-1;
       text-shadow: 0.5px 0.5px grey;
-      font-size: 60px;
+      font-size: 40px;
       font-weight: 900;
       vertical-align: middle;
     }
@@ -46,14 +46,16 @@
   padding-top: 60px;
   text-shadow: 0.4px 0.4px grey;
 
+  .pi {
+    font-size: 2rem;
+  }
+
   .insta, .discord {
     padding-right: 30px;
-    font-size: 40px;
   }
 
   .twitter {
     padding-right: 20px;
-    font-size: 40px;
   }
 }
 

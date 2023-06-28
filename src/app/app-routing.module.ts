@@ -15,7 +15,7 @@ const routes: Routes = [
     { path: 'dettaglio/:title/:_id', component: DetailComponent},
     { path: '', component: MoviesListComponent, pathMatch: 'full'}
   ]},
-  { path: 'signUp', component: RegistrationComponent},
+  { path: 'registration', component: RegistrationComponent},
   { path: '404', component: NotfoundComponent},
   { path: '**', redirectTo: '404', pathMatch: 'full'},
 ];

@@ -9,6 +9,7 @@
 
   .card {
     border-color: $secondary-color-2;
+    height: 560.5px!important;
     .card-image {
       height: 200px;
       background-repeat: no-repeat;
@@ -35,6 +36,7 @@
         display: block;
         font-weight: 700;
         padding: 13px;
+        overflow: hidden;
       }
     }
   }

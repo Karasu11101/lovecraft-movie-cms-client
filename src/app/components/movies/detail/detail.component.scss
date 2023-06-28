@@ -5,7 +5,7 @@
   .dettaglio-image {
     clear: both;
     margin-top: 1px;
-    height: 400px;
+    height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -16,7 +16,6 @@
     background-color: $secondary-color-1;
 
     .dettaglio-title {
-      // padding: 20px;
       font-weight: bold;
       font-size: 40px;
       color: $secondary-color-5;
@@ -24,7 +23,6 @@
     }
 
     .dettaglio-text {
-      // padding: 20px;
       text-align: justify;
       color: $secondary-color-5;
     }
