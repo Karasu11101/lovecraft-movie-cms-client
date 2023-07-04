@@ -3,10 +3,11 @@
     <div class="card">
       <div class="card-image" [ngStyle]="{'background-image': 'url(' + movie.image + ')'}"></div>
       <div class="card-body">
-        <div *ngIf="movie.title.length > 18" title="{{movie.title}}">
+        <!-- <div *ngIf="movie.title.length > 18" title="{{movie.title}}">
           <h5 class="card-title">{{movie.title | slice: 0:accorciaTitolo(movie.title)}}...</h5>
-        </div>
-        <div *ngIf="movie.title.length <= 18" title="{{movie.title}}">
+        </div> -->
+        <!-- <div *ngIf="movie.title.length <= 18" title="{{movie.title}}"> -->
+        <div title="{{movie.title}}">
           <h5 id="full-title" class="card-title">{{movie.title}}</h5>
         </div>
         <p class="card-text">{{movie.description | slice: 0:accorciaTesto(movie.description)}}...</p>
