@@ -20,7 +20,7 @@
   .links {
     white-space: nowrap;
 
-    .homeLink, .bookLink, .movieLink, .registrationLink {
+    .homeLink, .bookLink, .movieLink, .registrationLink, .newMovieLink {
       font-family: 'Tulpen One', cursive!important;
       padding-left: 15px;
       cursor: pointer;
@@ -62,7 +62,7 @@
 .middle {
   // white-space: nowrap;
   width: 50%;
-  text-align: center;
+  text-align: left;
 
   .title {
     // width: 50%;

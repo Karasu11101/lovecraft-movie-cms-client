@@ -82,3 +82,36 @@ body {
     right: 0.5rem;
     color: #6c757d;
 }
+
+.p-paginator {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+  background-color: $secondary-color-1!important;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+	background: $primary-color-4!important;
+	border-color: $primary-color-2!important;
+	color: #ffffff!important;
+}
+
+.p-element {
+  button:hover {
+    background-color: $primary-color-4!important;
+  }
+
+  button {
+    border-radius: 50%!important;
+  }
+}
+
+button:focus {
+  outline: 0!important;
+  box-shadow: none!important;
+}
+
+form {
+  align-items: center!important;
+}

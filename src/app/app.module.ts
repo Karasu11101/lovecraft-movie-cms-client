@@ -19,6 +19,7 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { DetailComponent } from './components/movies/detail/detail.component';
 import { MoviesListComponent } from './components/movies/movies-list/movies-list.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
+import { NewMovieComponent } from './components/movies/new-movie/new-movie.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { RegistrationComponent } from './components/user/registration/registrati
     DetailComponent,
     MoviesListComponent,
     RegistrationComponent,
+    NewMovieComponent,
   ],
   imports: [
     BrowserModule,
