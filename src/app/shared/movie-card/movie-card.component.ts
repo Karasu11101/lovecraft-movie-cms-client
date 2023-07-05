@@ -8,6 +8,10 @@ import { Movie } from 'src/app/models/movie.model';
 })
 export class MovieCardComponent {
   @Input() movies: Movie[];
+  page = 1;
+  moviesPerPage = 4;
+
+  @Input() currentPage: string;
 
   accorciaTesto(descrizione: string): number {
     let lunghezzaMassima = 180;
@@ -27,5 +31,10 @@ export class MovieCardComponent {
       let ultimoSpazio = titolo.lastIndexOf(' ', lunghezzaMassima);
       return ultimoSpazio;
     }
+  }
+
+  paginate(e) {
+    e.page = e.page + 1;
+    this.page = e.page;
   }
 }

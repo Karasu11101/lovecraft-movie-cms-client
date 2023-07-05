@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-registration',
@@ -13,7 +14,7 @@ export class RegistrationComponent {
   form = new FormGroup({
     username: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]),
     name: new FormControl('', [Validators.required, Validators.pattern(/^([A-Z][A-Za-z ,.'`-]{3,30})$/)]),
-    surname: new FormControl('', [Validators.required, Validators.pattern(/^([A-Z][A-Za-z ,.'`-]{3,30})$/)]),
+    surname: new FormControl('', [Validators.required, Validators.pattern(/^([A-Z][A-Za-z ,.'`-]{2,30})$/)]),
     email: new FormControl('', [Validators.email, Validators.required]),
     birthdate: new FormControl('', Validators.required),
     password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$/)]),
@@ -21,11 +22,18 @@ export class RegistrationComponent {
     accetto: new FormControl(false, Validators.requiredTrue)
   })
 
-  constructor(private router: Router, private modalService: NgbModal) {}
+  constructor(private router: Router, private userService: UserService, private modalService: NgbModal) {}
 
   onSubmit() {
     console.log(this.form.value);
-
+    const user = {
+      username: this.form.value.username,
+      name: this.form.value.name,
+      surname: this.form.value.surname,
+      email: this.form.value.email
+    }
+    this.userService.userData.next(user);
+    this.router.navigateByUrl('home');
   }
 
   checkPassword(): boolean {

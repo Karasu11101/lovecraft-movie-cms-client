@@ -1,0 +1,52 @@
+@import '../../styles/colors.scss';
+
+.overlay {
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.442);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+#background {
+  border: 5px $secondary-color-1 solid;
+  // border-radius: 25px;
+  padding: 10px;
+  height: 230px;
+  width: 900px;
+  text-align: center!important;
+  background-color: $primary-color-2;
+
+  .title {
+    font-weight: 600!important;
+    color: $secondary-color-1;
+  }
+
+  .user-data {
+    padding: 20px 30px;
+    text-align: left;
+    white-space: nowrap!important;
+    color: $secondary-color-1;
+    .secondary-title {
+      font-weight: 600;
+    }
+  }
+
+  #close-button {
+    background-color: $primary-color-1;
+    border: 3px $secondary-color-1 solid;
+    border-radius: 5px;
+    color: $secondary-color-5;
+    width: 100px;
+    height: 30px;
+
+    button:hover {
+      background-color: $primary-color-1;
+    }
+  }
+}

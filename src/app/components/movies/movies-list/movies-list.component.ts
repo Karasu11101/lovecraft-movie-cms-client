@@ -12,6 +12,8 @@ import { MoviesService } from 'src/app/services/movies.service';
 export class MoviesListComponent implements OnInit {
   movies: Movie[];
 
+  currentPage: string;
+
   constructor(private moviesService: MoviesService, private router: Router) {}
 
   ngOnInit(): void {
