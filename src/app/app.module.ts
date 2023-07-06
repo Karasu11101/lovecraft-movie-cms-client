@@ -19,6 +19,8 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { DetailComponent } from './components/movies/detail/detail.component';
 import { MoviesListComponent } from './components/movies/movies-list/movies-list.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
+import { ButtonShadowDirective } from './directives/button-shadow.directive';
+import { WhiteShadowBoxDirective } from './directives/white-shadow-box.directive';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { RegistrationComponent } from './components/user/registration/registrati
     DetailComponent,
     MoviesListComponent,
     RegistrationComponent,
+    ButtonShadowDirective,
+    WhiteShadowBoxDirective,
   ],
   imports: [
     BrowserModule,
