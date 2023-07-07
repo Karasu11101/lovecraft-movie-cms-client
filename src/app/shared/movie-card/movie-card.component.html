@@ -1,14 +1,17 @@
-<div id="contenitoreCards">
-  <div class="container-card" *ngFor="let movie of movies">
-    <div class="card">
-      <div class="card-image" [ngStyle]="{'background-image': 'url(' + movie.image + ')'}"></div>
-      <div class="card-body">
-        <div title="{{movie.title}}">
-          <h5 id="full-title" class="card-title">{{movie.title}}</h5>
+<div *ngIf="movies$ | async as moviess">
+  <p-paginator (onPageChange)="paginate($event)" [rows]="moviesPerPage" [totalRecords]="moviess.length"></p-paginator>
+  <div id="contenitoreCards">
+    <div class="container-card" *ngFor="let movie of moviess | slice: (page * moviesPerPage) - moviesPerPage : page * moviesPerPage">
+      <div class="card">
+        <div class="card-image" [ngStyle]="{'background-image': 'url(' + movie.image + ')'}"></div>
+        <div class="card-body">
+          <div title="{{movie.title}}">
+            <h5 id="full-title" class="card-title">{{movie.title}}</h5>
+          </div>
+          <p class="card-text">{{movie.description | slice: 0:accorciaTesto(movie.description)}}...</p>
+          <a routerLink="/movies/dettaglio/{{movie.title}}/{{movie._id}}" class="btn btn-primary" appButtonShadow>Visualizza</a>
+          <!-- <a [routerLink]="'dettaglio/'+recipe._id" class="btn btn-primary">Visualizza</a> -->
         </div>
-        <p class="card-text">{{movie.description | slice: 0:accorciaTesto(movie.description)}}...</p>
-        <a routerLink="/movies/dettaglio/{{movie.title}}/{{movie._id}}" class="btn btn-primary" appButtonShadow>Visualizza</a>
-        <!-- <a [routerLink]="'dettaglio/'+recipe._id" class="btn btn-primary">Visualizza</a> -->
       </div>
     </div>
   </div>

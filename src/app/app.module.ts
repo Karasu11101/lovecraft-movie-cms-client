@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule } from 'primeng/divider';
 import { PaginatorModule } from 'primeng/paginator';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,8 @@ import { MoviesListComponent } from './components/movies/movies-list/movies-list
 import { RegistrationComponent } from './components/user/registration/registration.component';
 import { ButtonShadowDirective } from './directives/button-shadow.directive';
 import { WhiteShadowBoxDirective } from './directives/white-shadow-box.directive';
+import { NewMovieComponent } from './components/movies/new-movie/new-movie.component';
+import { LoginComponent } from './components/user/login/login.component';
 
 
 @NgModule({
@@ -38,6 +41,8 @@ import { WhiteShadowBoxDirective } from './directives/white-shadow-box.directive
     RegistrationComponent,
     ButtonShadowDirective,
     WhiteShadowBoxDirective,
+    NewMovieComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,8 @@ import { WhiteShadowBoxDirective } from './directives/white-shadow-box.directive
     ReactiveFormsModule,
     PasswordModule,
     DividerModule,
-    PaginatorModule
+    PaginatorModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

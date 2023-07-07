@@ -10,3 +10,19 @@
   <h2 class="cards-title">Take a peek into the abyss:</h2>
   <app-movie-card [movies]="movies"></app-movie-card>
 </div>
+
+<ng-template [ngIf]="name">
+  <div class="overlay">
+    <div id="background">
+      <p class="title">{{name}} thank you for joining the cult! You will find your account details below:</p>
+      <ul class="user-data">
+        <li>Username: <strong>{{username}}</strong></li>
+        <li>Name: <strong>{{name}}</strong></li>
+        <li>Surname: <strong>{{surname}}</strong></li>
+        <li>email: <strong>{{email}}</strong></li>
+        <li>Date of birth: <strong>{{dateOfBirth}}</strong></li>
+      </ul>
+      <button id="close-button" (click)="closeWindow()">CLOSE</button>
+    </div>
+  </div>
+</ng-template>

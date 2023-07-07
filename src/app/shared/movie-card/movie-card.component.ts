@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Movie } from 'src/app/models/movie.model';
+import { MoviesService } from 'src/app/services/movies.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-movie-card',
@@ -8,6 +10,16 @@ import { Movie } from 'src/app/models/movie.model';
 })
 export class MovieCardComponent {
   @Input() movies: Movie[];
+
+  page = 1;
+  moviesPerPage = 4;
+
+  movies$ = this.moviesService.getMoviesAsync();
+
+  role: any;
+  extractedRole = this.userService.userRole.subscribe(res => this.role = res);
+
+  constructor(private moviesService: MoviesService, private userService: UserService) {}
 
   accorciaTesto(descrizione: string): number {
     let lunghezzaMassima = 180;
@@ -28,4 +40,10 @@ export class MovieCardComponent {
       return ultimoSpazio;
     }
   }
+
+  paginate(e) {
+    e.page = e.page + 1;
+    this.page = e.page;
+  }
+
 }
