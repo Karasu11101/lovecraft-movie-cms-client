@@ -3,7 +3,7 @@
 
     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Create new movie sheet</p>
 
-    <form class="mx-1 mx-md-4" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <form class="mx-1 mx-md-4" [formGroup]="form" (ngSubmit)="onSubmit()" id="signUpForm">
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-pencil" ></i>
@@ -32,8 +32,8 @@
       </div>
 
       <div class="form-check d-flex justify-content-left mb-5">
-        <input class="form-check-input me-2" type="checkbox" value="" id="published" name="published" />
-        <label class="form-check-label" for="accetto">
+        <input class="form-check-input me-2" type="checkbox" value="" id="confirm" name="confirm" formControlName="confirm"/>
+        <label class="form-check-label" for="confirm">
           Confirm to complete the creation process
         </label>
       </div>
@@ -61,13 +61,13 @@
       </li>
       <li><strong>Image:</strong>
         <div class="summaryImg">
-          <img [src]="form.controls.image.value" height="30%" width="30%">
+          <img [src]="form.controls.image.value" id="modalImage">
         </div>
       </li>
     </ul>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn" aria-label="cancel" (click)="modal.dismiss()">Back to Movies</button>
-    <button type="button" class="btn btn-primary" aria-label="action" (click)="modal.close()">Create a new sheet</button>
+    <button id="backButton" type="button" class="btn" aria-label="cancel" (click)="modal.dismiss()">Back to Movies</button>
+    <button id="newMovieButton" type="button" class="btn btn-primary" aria-label="action" (click)="modal.close()" appButtonShadow>Create a new sheet</button>
   </div>
 </ng-template>

@@ -16,7 +16,8 @@ export class NewMovieComponent {
   form = new FormGroup ({
     title: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
-    image: new FormControl('', Validators.required)
+    image: new FormControl('', Validators.required),
+    confirm: new FormControl(false, Validators.requiredTrue)
   })
 
   constructor(private router: Router, private moviesService: MoviesService, private movieModal: NgbModal) {}
@@ -37,11 +38,12 @@ export class NewMovieComponent {
     this.movieModal.open(content, {ariaLabelledBy: 'movie sheet creation summary', size: 'xl', centered: true}).result
       .then((res) => {
         console.log('redirected to new movie page');
-        location.reload()
+        this.form.reset();
       })
       .catch((res) => {
         console.log('redirected to movies page');
         this.router.navigateByUrl('movies');
       })
   }
+
 }

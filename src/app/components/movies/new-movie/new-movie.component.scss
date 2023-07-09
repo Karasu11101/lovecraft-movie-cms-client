@@ -19,9 +19,48 @@
     img {
       height: 70%!important;
       width: 70%!important;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
   button {
     background-color: $primary-color-2;
   }
+}
+
+#modalImage {
+  height: 30%!important;
+  width: 30%!important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal-header, .modal-footer {
+  background-color: $primary-color-2;
+  height: 100px;
+  width: 100%;
+}
+
+.modal-body {
+  background-color: $secondary-color-1;
+  color: $secondary-color-5;
+
+  h3 {
+    font-weight: 600;
+  }
+}
+
+#backButton {
+  border: none!important;
+  background-color: transparent!important;
+  color: $secondary-color-5;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#newMovieButton {
+  background-color: $secondary-color-1;
+  color: $secondary-color-5;
+  font-weight: 600;
+  font-size: 20px;
 }
