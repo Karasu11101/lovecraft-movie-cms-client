@@ -1,3 +1,5 @@
 <h2>Behold the most horrific tales mankind has ever seen</h2>
-<a class="nav-link" routerLink="/movies/newMovie" routerLinkActive="active"><i class="pi pi-pencil"></i> Add movie</a>
-<app-movie-card [movies]="movies"></app-movie-card>
+<app-movie-card [movies]="movies" currentPage="movieList"></app-movie-card>
+<div id="addBox">
+  <a id="addMovie" class="btn btn-primary" routerLink="/movies/newMovie" routerLinkActive="active">Add movie</a>
+</div>

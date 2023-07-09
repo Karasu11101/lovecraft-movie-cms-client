@@ -20,17 +20,17 @@
   .links {
     white-space: nowrap;
 
-    .homeLink, .bookLink, .movieLink, .registrationLink {
-      font-family: 'Tulpen One', cursive!important;
-      padding-left: 15px;
-      cursor: pointer;
-      text-decoration: none;
-      color: $secondary-color-1;
-      text-shadow: 0.5px 0.5px grey;
-      font-size: 40px;
-      font-weight: 900;
-      vertical-align: middle;
-    }
+  //   .homeLink, .bookLink, .movieLink, .registrationLink {
+  //     font-family: 'Tulpen One', cursive!important;
+  //     padding-left: 15px;
+  //     cursor: pointer;
+  //     text-decoration: none;
+  //     color: $secondary-color-1;
+  //     text-shadow: 0.5px 0.5px grey;
+  //     font-size: 40px;
+  //     font-weight: 900;
+  //     vertical-align: middle;
+  //   }
   }
   .logo {
     vertical-align: middle;
@@ -76,3 +76,20 @@
     text-align: center;
   }
 }
+
+#registrationLink {
+  padding-right: 20px;
+}
+
+a {
+  font-family: 'Tulpen One', cursive!important;
+  padding-left: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  color: $secondary-color-1;
+  text-shadow: 0.5px 0.5px grey;
+  font-size: 40px;
+  font-weight: 900;
+  vertical-align: middle;
+}
+

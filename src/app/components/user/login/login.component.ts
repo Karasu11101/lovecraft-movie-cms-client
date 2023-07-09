@@ -21,8 +21,21 @@ export class LoginComponent {
           if(res) {
             this.auth.saveStorage(res);
 
-            // this.userService.ruoloUtente
+            this.userService.userRole.next(res.role);
+
+            this.messageService.add({severity: 'error', summary: 'Login error', detail: 'Username or password are incorrect', life: 2000});
+            setTimeout(() => {
+              this.router.navigateByUrl('home');
+            }, 2000);
+          } else {
+            this.loginError = 'Username or password are incorrect';
+            this.messageService.add({severity: 'error', summary: 'Login error', detail: 'Username or password are incorrect', life: 2000});
           }
+        },
+        error: (e) => {
+          console.log(e);
+          this.loginError = 'Username or password are incorrect';
+          this.messageService.add({severity: 'error', summary: 'Login error', detail: 'Username or password are incorrect', life: 2000});
         }
       })
     }

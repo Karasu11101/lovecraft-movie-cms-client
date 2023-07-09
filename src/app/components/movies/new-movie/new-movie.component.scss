@@ -1,20 +1,27 @@
 @import '../../../styles/colors.scss';
 
 .contenitore {
-  background-color: $secondary-color-2;
+  background-color: $secondary-color-1;
+  display: flex;
+  justify-content: center;
   .text-center {
-    color: $primary-color-2;
-    text-shadow: 0.5px 0.5px $secondary-color-1;
+    color: $secondary-color-5;
+    // text-shadow: 0.5px 0.5px $secondary-color-4;
   }
   .pi {
     padding-bottom: 10px;
-    color: $primary-color-2;
+    color: $secondary-color-5;
     text-shadow: 0.5px 0.5px $secondary-color-1;
   }
   p {
     text-align: right;
     color: $secondary-color-5;
   }
+
+  #confirm {
+    color: $secondary-color-5;
+  }
+
   .imageDiv {
     img {
       height: 70%!important;
@@ -24,7 +31,8 @@
     }
   }
   button {
-    background-color: $primary-color-2;
+    background-color: $primary-color-4;
+    border: none;
   }
 }
 

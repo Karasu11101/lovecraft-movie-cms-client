@@ -12,14 +12,14 @@ export class AuthService {
 
   constructor(private http: HttpClient, private userService: UserService) { }
 
-  login(email: string, password: string): Observable<User> {
-    const user = { email: email, password: password };
+  login(username: string, password: string): Observable<User> {
+    const user = { username: username, password: password };
     return this.http.post<User>(`${this.apiBaseUrl}/login`, user)
   }
 
   saveStorage(dati: any) {
     const user = {
-      name: dati.name,
+      username: dati.username,
       email: dati.email,
       password: dati.password
     }

@@ -1,5 +1,5 @@
 <div *ngIf="movies$ | async as moviess">
-  <p-paginator (onPageChange)="paginate($event)" [rows]="moviesPerPage" [totalRecords]="moviess.length"></p-paginator>
+  <p-paginator id="paginator" (onPageChange)="paginate($event)" [rows]="moviesPerPage" [totalRecords]="moviess.length" *ngIf="currentPage=='movieList'"></p-paginator>
   <div id="contenitoreCards">
     <div class="container-card" *ngFor="let movie of moviess | slice: (page * moviesPerPage) - moviesPerPage : page * moviesPerPage">
       <div class="card">

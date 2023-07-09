@@ -10,6 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class MovieCardComponent {
   @Input() movies: Movie[];
+  @Input() currentPage: string;
 
   page = 1;
   moviesPerPage = 4;
