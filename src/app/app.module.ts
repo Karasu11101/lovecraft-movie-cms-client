@@ -7,6 +7,7 @@ import { DividerModule } from 'primeng/divider';
 import { PaginatorModule } from 'primeng/paginator';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastModule } from 'primeng/toast';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,9 @@ import { ButtonShadowDirective } from './directives/button-shadow.directive';
 import { WhiteShadowBoxDirective } from './directives/white-shadow-box.directive';
 import { NewMovieComponent } from './components/movies/new-movie/new-movie.component';
 import { LoginComponent } from './components/user/login/login.component';
+import { RegistrationModalComponent } from './shared/registration-modal/registration-modal.component';
+import { ProfileComponent } from './components/user/profile/profile.component';
+
 
 
 @NgModule({
@@ -40,6 +44,12 @@ import { LoginComponent } from './components/user/login/login.component';
     DetailComponent,
     MoviesListComponent,
     RegistrationComponent,
+    ButtonShadowDirective,
+    WhiteShadowBoxDirective,
+    NewMovieComponent,
+    LoginComponent,
+    RegistrationModalComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +63,7 @@ import { LoginComponent } from './components/user/login/login.component';
     PaginatorModule,
     HttpClientModule,
     ToastModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

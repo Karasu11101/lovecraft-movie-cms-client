@@ -9,6 +9,7 @@ import { MoviesListComponent } from './components/movies/movies-list/movies-list
 import { RegistrationComponent } from './components/user/registration/registration.component';
 import { NewMovieComponent } from './components/movies/new-movie/new-movie.component';
 import { LoginComponent } from './components/user/login/login.component';
+import { ProfileComponent } from './components/user/profile/profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,9 +19,12 @@ const routes: Routes = [
     { path: 'newMovie', component: NewMovieComponent },
     { path: '', component: MoviesListComponent, pathMatch: 'full' }
   ]},
-  { path: 'registration', component: RegistrationComponent},
-  { path: '404', component: NotfoundComponent},
-  { path: '**', redirectTo: '404', pathMatch: 'full'},
+
+  { path: 'registration', component: RegistrationComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'login', component: LoginComponent },
+  { path: '404', component: NotfoundComponent },
+  { path: '**', redirectTo: '404', pathMatch: 'full' },
 ];
 
 @NgModule({

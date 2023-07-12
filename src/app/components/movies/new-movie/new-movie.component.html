@@ -15,7 +15,8 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-book" ></i>
-          <input placeholder="Description" type="text" id="description" name="description" formControlName="description"  class="form-control"/>
+          <!-- <input placeholder="Description" type="text" id="description" name="description" formControlName="description"  class="form-control"/> -->
+          <ckeditor style="height: 200px; background-color: white;" [editor]="Editor" class="movieDescription" formControlName="descritpion" (ready)="onReady($event)"></ckeditor>
           <p class="help is-danger" *ngIf="form.controls.description.hasError('required') && form.controls.description.touched">Description is required</p>
         </div>
       </div>
@@ -57,7 +58,8 @@
     <ul>
       <li><strong>Title: </strong>{{form.controls.title.value}}</li>
       <li><strong>Description:</strong>
-        <p>{{form.controls.description.value}}</p>
+        <!-- <p>{{form.controls.description.value}}</p> -->
+        <span [innerHtml]="description"></span>
       </li>
       <li><strong>Image:</strong>
         <div class="summaryImg">

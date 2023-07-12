@@ -28,10 +28,18 @@ export class HomeComponent implements OnInit {
   email: string;
 
 
-  constructor(private moviesService: MoviesService) {}
+  constructor(private moviesService: MoviesService, private userService: UserService, private modalService: NgbModal) {}
 
   ngOnInit(): void {
     this.onGetRecipes();
+
+    this.userService.userData.subscribe((res: any) => {
+      this.name = res.name;
+      this.username = res.username;
+      this.surname = res.surname;
+      this.email = res.email;
+      this.dateOfBirth = res.dateOfBirth;
+    })
   }
 
   onGetRecipes() {
@@ -46,5 +54,14 @@ export class HomeComponent implements OnInit {
         console.log(e);
       }
     });
+  }
+
+  closeWindow() {
+    this.userService.userData.next('');
+    this.name = '';
+    this.username = '';
+    this.surname = '';
+    this.email = '';
+    this.dateOfBirth = '';
   }
 }

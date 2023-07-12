@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
 import { Movie } from 'src/app/models/movie.model';
 import { MoviesService } from 'src/app/services/movies.service';
-
+import { AuthService } from 'src/app/services/auth.service';
+import { User } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-movies-list',
@@ -11,14 +13,23 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class MoviesListComponent implements OnInit {
   movies: Movie[];
+  role: any;
 
-  currentPage: string;
-
-  constructor(private moviesService: MoviesService, private router: Router) {}
+  constructor(private moviesService: MoviesService, private router: Router, public auth: AuthService, private userService: UserService) {}
 
   ngOnInit(): void {
     this.onGetMovies();
+    this.role = JSON.parse(localStorage.getItem('user')).role;
+    console.log(localStorage);
   }
+
+  // ngDoCheck(): void {
+  //   if(JSON.parse(localStorage.getItem('user')) !== null) {
+  //     this.user = JSON.parse(localStorage.getItem('user'));
+  //     this.role = JSON.parse(localStorage.getItem('user')).role;
+  //     console.log(this.role);
+  //   }
+  // }
 
   onGetMovies() {
     this.moviesService.getMovies().subscribe({

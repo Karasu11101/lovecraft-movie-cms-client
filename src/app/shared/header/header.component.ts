@@ -20,6 +20,7 @@ export class HeaderComponent implements DoCheck {
   ngDoCheck(): void {
     if(JSON.parse(localStorage.getItem('user')) !== null) {
       this.user = JSON.parse(localStorage.getItem('user'));
+      this.role = JSON.parse(localStorage.getItem('user')).role;
     }
   }
 

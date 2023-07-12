@@ -12,8 +12,8 @@ export class AuthService {
 
   constructor(private http: HttpClient, private userService: UserService) { }
 
-  login(username: string, password: string): Observable<User> {
-    const user = { username: username, password: password };
+  login(email: string, password: string): Observable<User> {
+    const user = { email: email, password: password };
     return this.http.post<User>(`${this.apiBaseUrl}/login`, user)
   }
 
@@ -21,7 +21,8 @@ export class AuthService {
     const user = {
       username: dati.username,
       email: dati.email,
-      password: dati.password
+      password: dati.password,
+      role: dati.role
     }
 
     localStorage.setItem('user', JSON.stringify(user));
