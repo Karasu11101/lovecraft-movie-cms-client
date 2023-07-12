@@ -42,9 +42,35 @@
   }
 }
 
-h2 {
-  color: $secondary-color-5;
-  text-shadow: 0.5px, 0.5px, black;
-  padding: 20px 30px;
-  text-align: center;
+@media screen and (max-width: 960px) {
+  .container-card {
+    width: 30%;
+    margin-left: 2.5%;
+  }
+
+  // .card-text {
+  //   height: 200px;
+  // }
+}
+
+@media screen and (max-width: 660px) {
+  .container-card {
+    width: 47%;
+    margin-left: 2%;
+  }
+
+  // .card-text {
+  //   height: 250px;
+  // }
+}
+
+@media screen and (max-width: 480px) {
+  .container-card {
+    width: 98%;
+    margin-left: 1%;
+  }
+
+  // .card-text {
+  //   height: auto;
+  // }
 }

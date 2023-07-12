@@ -8,18 +8,23 @@ import { DetailComponent } from './components/movies/detail/detail.component';
 import { MoviesListComponent } from './components/movies/movies-list/movies-list.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
 import { NewMovieComponent } from './components/movies/new-movie/new-movie.component';
+import { LoginComponent } from './components/user/login/login.component';
+import { ProfileComponent } from './components/user/profile/profile.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'movies', component: MoviesComponent, children: [
-    { path: 'dettaglio/:title/:_id', component: DetailComponent},
-    { path: '', component: MoviesListComponent, pathMatch: 'full'}
+    { path: 'dettaglio/:title/:_id', component: DetailComponent },
+    { path: 'newMovie', component: NewMovieComponent },
+    { path: '', component: MoviesListComponent, pathMatch: 'full' }
   ]},
-  { path: 'registration', component: RegistrationComponent},
-  { path: 'newMovie', component: NewMovieComponent},
-  { path: '404', component: NotfoundComponent},
-  { path: '**', redirectTo: '404', pathMatch: 'full'},
+
+  { path: 'registration', component: RegistrationComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'login', component: LoginComponent },
+  { path: '404', component: NotfoundComponent },
+  { path: '**', redirectTo: '404', pathMatch: 'full' },
 ];
 
 @NgModule({

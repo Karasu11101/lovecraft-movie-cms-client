@@ -8,17 +8,24 @@
         <a class="homeLink" routerLink="home">Home</a>
         <a class="bookLink">Books</a>
         <a class="movieLink" routerLink="movies">Movies</a>
-        <a class="registrationLink" routerLink="registration">Sign-up</a>
-        <a class="newMovieLink" routerLink="newMovie">New Movie</a>
+        <!-- <a class="registrationLink" routerLink="registration">Sign-up</a> -->
       </span>
     </div>
     <div class="column middle">
       <div class="title">Eldritch Vault</div>
     </div>
     <div class="column right">
-      <span class="insta"><i class="pi pi-instagram"></i></span>
+      <a class="nav-link" id="registrationLink" routerLink='login' routerLinkActive="active" *ngIf="!auth.isLogged()">Sign-in</a>
+      <div id="signup">
+        <ul *ngIf="auth.isLogged()">
+          <li><strong>Greetings {{user.username}}! [</strong></li>
+          <li><a class="nav-link" routerLink="profile" routerLinkActive="active">Profile - </a></li>
+          <li><a class="nav-link" (click)="logout()" style="cursor: pointer">Log-out ]</a></li>
+        </ul>
+      </div>
+      <!-- <span class="insta"><i class="pi pi-instagram"></i></span>
       <span class="discord"><i class="pi pi-discord"></i></span>
-      <span class="twitter"><i class="pi pi-twitter"></i></span>
+      <span class="twitter"><i class="pi pi-twitter"></i></span> -->
     </div>
   </div>
 </header>

@@ -10,6 +10,11 @@ body {
   overflow-x: hidden;
   font-family: 'Unna', serif!important;
   background-color: black!important;
+  // background-image: url(https://home.adelphi.edu/~lu22254/cthulhu.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: auto;
+
 }
 
 .mainContainer {
@@ -88,13 +93,13 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-  background-color: $secondary-color-1!important;
+  background-color: transparent!important;
 }
 
 .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
 	background: $primary-color-4!important;
-	border-color: $primary-color-2!important;
-	color: #ffffff!important;
+	// border-color: $secondary-color-4!important;
+	color: $secondary-color-5!important;
 }
 
 .p-element {
@@ -104,14 +109,11 @@ body {
 
   button {
     border-radius: 50%!important;
+    color: $secondary-color-5!important;
   }
-}
 
-button:focus {
-  outline: 0!important;
-  box-shadow: none!important;
-}
-
-form {
-  align-items: center!important;
+  button:focus {
+    outline: 0!important;
+    box-shadow: none!important;
+  }
 }

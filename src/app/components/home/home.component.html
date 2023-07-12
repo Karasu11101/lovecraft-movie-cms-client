@@ -11,16 +11,16 @@
   <app-movie-card [movies]="movies" currentPage="home"></app-movie-card>
 </div>
 
-<!-- FINESTRA MODALE REGISTRAZIONE AVVENUTA -->
 <ng-template [ngIf]="name">
   <div class="overlay">
     <div id="background">
-      <p class="title">Welcome to the site {{username}}! Below you will find the details of your account:</p>
+      <p class="title">{{name}} thank you for joining the cult! You will find your account details below:</p>
       <ul class="user-data">
         <li>Username: <strong>{{username}}</strong></li>
         <li>Name: <strong>{{name}}</strong></li>
         <li>Surname: <strong>{{surname}}</strong></li>
         <li>Email: <strong>{{email}}</strong></li>
+        <li>Date of birth: <strong>{{dateOfBirth}}</strong></li>
       </ul>
       <button id="close-button" (click)="closeWindow()">CLOSE</button>
     </div>

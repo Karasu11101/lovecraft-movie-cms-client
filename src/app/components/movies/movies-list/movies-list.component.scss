@@ -1,8 +1,40 @@
 @import "../../../styles/colors.scss";
 
-// h2 {
-//   color: $secondary-color-5;
-//   text-shadow: 0.5px, 0.5px, black;
-//   padding: 20px 30px;
-//   text-align: center;
+// #movieListContainer {
+//   display: flex;
+//   flex-direction: row;
+//   white-space: nowrap;
 // }
+
+h2 {
+  color: $secondary-color-5;
+  text-shadow: 0.5px, 0.5px, black;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+// a {
+//   text-align: center;
+//   text-decoration: none;
+//   color: $secondary-color-5;
+//   font-weight: 600;
+//   font-size: 16px;
+//   margin: auto;
+//   padding: 30px;
+// }
+
+#addBox {
+  padding: 25px;
+  #addMovie {
+    height: 30px;
+    width: 120px;
+    background-color: $primary-color-4;
+    color: $secondary-color-5;
+    display: flex;
+    justify-content: center!important;
+    flex-direction: column;
+    padding: 20px;
+    font-weight: 600;
+    border: none;
+  }
+}

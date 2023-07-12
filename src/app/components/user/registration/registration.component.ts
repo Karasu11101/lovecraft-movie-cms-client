@@ -13,8 +13,8 @@ export class RegistrationComponent {
 
   form = new FormGroup({
     username: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]),
-    name: new FormControl('', [Validators.required, Validators.pattern(/^([A-Z][A-Za-z ,.'`-]{3,30})$/)]),
-    surname: new FormControl('', [Validators.required, Validators.pattern(/^([A-Z][A-Za-z ,.'`-]{2,30})$/)]),
+    name: new FormControl('', [Validators.required, Validators.pattern(/^([A-Za-z]{3,30})$/)]),
+    surname: new FormControl('', [Validators.required, Validators.pattern(/^([A-Za-z]{3,30})$/)]),
     email: new FormControl('', [Validators.email, Validators.required]),
     birthdate: new FormControl('', Validators.required),
     password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$/)]),
@@ -22,7 +22,7 @@ export class RegistrationComponent {
     accetto: new FormControl(false, Validators.requiredTrue)
   })
 
-  constructor(private router: Router, private userService: UserService, private modalService: NgbModal) {}
+  constructor(private router: Router, private modalService: NgbModal, private userService: UserService) {}
 
   onSubmit() {
     console.log(this.form.value);
@@ -30,10 +30,20 @@ export class RegistrationComponent {
       username: this.form.value.username,
       name: this.form.value.name,
       surname: this.form.value.surname,
-      email: this.form.value.email
+      email: this.form.value.email,
+      dateOfBirth: this.form.value.birthdate,
+      password: this.form.value.password
     }
+    this.userService.createUser(user).subscribe({
+      next: (res) => {
+        console.log(res);
+        this.router.navigateByUrl('home');
+      },
+      error: (e) => {
+        console.log(e);
+      }
+    })
     this.userService.userData.next(user);
-    this.router.navigateByUrl('home');
   }
 
   checkPassword(): boolean {

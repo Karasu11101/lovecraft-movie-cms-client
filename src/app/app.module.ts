@@ -5,6 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule } from 'primeng/divider';
 import { PaginatorModule } from 'primeng/paginator';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastModule } from 'primeng/toast';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +22,13 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { DetailComponent } from './components/movies/detail/detail.component';
 import { MoviesListComponent } from './components/movies/movies-list/movies-list.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
+import { ButtonShadowDirective } from './directives/button-shadow.directive';
+import { WhiteShadowBoxDirective } from './directives/white-shadow-box.directive';
 import { NewMovieComponent } from './components/movies/new-movie/new-movie.component';
+import { LoginComponent } from './components/user/login/login.component';
+import { RegistrationModalComponent } from './shared/registration-modal/registration-modal.component';
+import { ProfileComponent } from './components/user/profile/profile.component';
+
 
 
 @NgModule({
@@ -35,7 +44,12 @@ import { NewMovieComponent } from './components/movies/new-movie/new-movie.compo
     DetailComponent,
     MoviesListComponent,
     RegistrationComponent,
+    ButtonShadowDirective,
+    WhiteShadowBoxDirective,
     NewMovieComponent,
+    LoginComponent,
+    RegistrationModalComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +60,10 @@ import { NewMovieComponent } from './components/movies/new-movie/new-movie.compo
     ReactiveFormsModule,
     PasswordModule,
     DividerModule,
-    PaginatorModule
+    PaginatorModule,
+    HttpClientModule,
+    ToastModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

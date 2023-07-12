@@ -12,6 +12,7 @@ import { take, first } from 'rxjs';
 export class DetailComponent implements OnInit {
 
   movie: Movie;
+  page: number;
 
   constructor(private moviesService: MoviesService,
     private activatedRoute: ActivatedRoute,
@@ -19,10 +20,13 @@ export class DetailComponent implements OnInit {
 
     ngOnInit(): void {
         this.onGetMovies();
+        this.moviesService.movieData.subscribe( (res: number) => {
+          this.page = res;
+        } )
     }
 
     onGetMovies(): void {
-      const id = Number(this.activatedRoute.snapshot.paramMap.get('_id'));
+      const id = this.activatedRoute.snapshot.paramMap.get('_id');
       this.moviesService.getMovie(id).pipe(
         first()
       ).subscribe({
@@ -33,4 +37,8 @@ export class DetailComponent implements OnInit {
       });
     }
 
+    goBack() {
+      this.router.navigateByUrl('movies');
+      this.moviesService.movieData.next(this.page);
+    }
 }
