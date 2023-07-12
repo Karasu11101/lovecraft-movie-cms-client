@@ -34,7 +34,7 @@
   }
   .logo {
     vertical-align: middle;
-    height: 100px;
+    height: 40px;
     padding-left: 10px;
   }
 }
@@ -66,14 +66,16 @@
 
   .title {
     // width: 50%;
-    font-family: 'Tulpen One', cursive!important;
-    font-size: 140px;
+    font-family: 'Cinzel Decorative', cursive!important;
+    font-size: 60px;
     font-weight: bold;
     color: $secondary-color-1;
     text-shadow: 0.5px 0.5px grey;
     vertical-align: text-bottom!important;
     padding-bottom: 60px;
     text-align: center;
+    display: flex;
+
   }
 }
 

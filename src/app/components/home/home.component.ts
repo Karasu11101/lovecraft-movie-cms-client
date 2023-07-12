@@ -14,19 +14,12 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class HomeComponent implements OnInit {
 
   @ViewChild('modalRegistration', {static: false}) modal: ElementRef;
-
+  movies: Movie[];
   name: string;
   username: string;
   surname: string;
   email: string;
   dateOfBirth: string;
-
-  movies: Movie[];
-  username: string;
-  name: string;
-  surname: string;
-  email: string;
-
 
   constructor(private moviesService: MoviesService, private userService: UserService, private modalService: NgbModal) {}
 

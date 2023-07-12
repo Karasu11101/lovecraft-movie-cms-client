@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.288);
+  background-color: rgba(0, 0, 0, 0.442);
   height: 100%;
   width: 100%;
   display: flex;
@@ -15,9 +15,9 @@
 
 #background {
   border: 5px $secondary-color-1 solid;
-  border-radius: 25px;
+  // border-radius: 25px;
   padding: 10px;
-  height: 350px;
+  height: 230px;
   width: 900px;
   text-align: center!important;
   background-color: $primary-color-2;
@@ -25,7 +25,6 @@
   .title {
     font-weight: 600!important;
     color: $secondary-color-1;
-    font-size: 25px;
   }
 
   .user-data {
@@ -33,24 +32,22 @@
     text-align: left;
     white-space: nowrap!important;
     color: $secondary-color-1;
-    font-size: 20px;
     .secondary-title {
       font-weight: 600;
     }
   }
 
-  button {
-    text-align: center;
-  }
-
   #close-button {
     background-color: $primary-color-1;
-    border: 2px solid $secondary-color-1;
+    border: 3px $secondary-color-1 solid;
     border-radius: 5px;
-    font-size: 25px;
-    color: $secondary-color-1;
-    width: 120px;
-    height: 40px;
+    color: $secondary-color-5;
+    width: 100px;
+    height: 30px;
+
+    button:hover {
+      background-color: $primary-color-1;
+    }
   }
 }
 =======
