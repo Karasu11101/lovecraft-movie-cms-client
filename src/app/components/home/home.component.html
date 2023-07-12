@@ -7,8 +7,8 @@
     Throughout his adult life, Lovecraft was never able to support himself from earnings as an author and editor. He was virtually unknown during his lifetime and was almost exclusively published in pulp magazines before his death. A scholarly revival of Lovecraft's work began in the 1970s, and he is now regarded as one of the most significant 20th-century authors of supernatural horror fiction. Many direct adaptations and spiritual successors followed. Works inspired by Lovecraft, adaptations, or original works, began to form the basis of the Cthulhu Mythos, which utilizes Lovecraft's characters, setting, and themes.
   </p>
 
-  <h2 class="cards-title">Take a peek into the abyss:</h2>
-  <app-movie-card [movies]="movies"></app-movie-card>
+  <!-- <h2 class="cards-title">Take a peek into the abyss:</h2> -->
+  <app-movie-card [movies]="movies" currentPage="home"></app-movie-card>
 </div>
 
 <ng-template [ngIf]="name">
@@ -19,7 +19,7 @@
         <li>Username: <strong>{{username}}</strong></li>
         <li>Name: <strong>{{name}}</strong></li>
         <li>Surname: <strong>{{surname}}</strong></li>
-        <li>email: <strong>{{email}}</strong></li>
+        <li>Email: <strong>{{email}}</strong></li>
         <li>Date of birth: <strong>{{dateOfBirth}}</strong></li>
       </ul>
       <button id="close-button" (click)="closeWindow()">CLOSE</button>

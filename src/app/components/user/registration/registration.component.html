@@ -1,166 +1,3 @@
-<!-- REGISTRATION FORM DI PARTENZA -->
-<!-- <div class="contenitore">
-  <div class="col-xl-5 order-2 order-lg-1">
-
-    <p class="testo-centro-colsx text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign-up</p>
-
-    <form class="registration-form mx-1 mx-md-4" [formGroup]="form" (ngSubmit)="onSubmit()">
-      <div class="d-flex flex-row align-items-center mb-4">
-        <div class="username-box form-outline flex-fill mb-0">
-          <i class="pi pi-user-edit"></i>
-          <input placeholder="username" type="text" id="username" name="username" formControlName="username" class="form-control"/>
-          <p class="help is-danger" *ngIf="form.controls.username.hasError('required') && form.controls.username.touched">Username required</p>
-        </div>
-      </div>
-
-      <div class="d-flex flex-row align-items-center mb-4">
-        <div class="name-box form-outline flex-fill mb-0">
-          <i class="pi pi-user"></i>
-          <input placeholder="name" type="text" id="name" name="name" formControlName="name" class="form-control"/>
-          <p class="help is-danger" *ngIf="form.controls.name.hasError('required') && form.controls.name.touched">Name required</p>
-          <p class="help is-danger" *ngIf="form.controls.name.hasError('pattern') && form.controls.name.touched">Username must be between 3 and 30 characters</p>
-        </div>
-      </div>
-
-      <div class="d-flex flex-row align-items-center mb-4">
-        <div class="email-box form-outline flex-fill mb-0">
-          <i class="pi pi-envelope"></i>
-          <input placeholder="email" type="text" id="email" name="email" formControlName="email" class="form-control"/>
-          <p class="help is-danger" *ngIf="form.controls.email.hasError('required') && form.controls.email.touched">Email required</p>
-          <p class="help is-danger" *ngIf="form.controls.email.hasError('email') && form.controls.email.touched">Insert a valid email address</p>
-        </div>
-      </div>
-
-      <div class="birthdate-box d-flex flex-row align-items-center mb-4">
-        <div class="birthdate-box form-outline flex-fill mb-0">
-          <i class="pi pi-calendar"></i>
-          <input placeholder="birthdate" type="date" id="birthdate" name="birthdate" formControlName="birthdate" class="form-control"
-          min="1900-01-01" max="2005-12-31"/>
-        </div>
-      </div>
-
-      <div class="d-flex flex-row align-items-center mb-4">
-        <div class="password-box form-outline flex-fill mb-0">
-          <i class="pi pi-key"></i>
-          <p-password formControlName="password" class="form-control" [toggleMask]="true" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$">
-            <ng-template pTemplate="header">
-              <h6>Insert password</h6>
-            </ng-template>
-            <ng-template pTemplate="footer">
-              <p-divider></p-divider>
-              <p>How to build your password:</p>
-              <ul style="line-height: 1.5;">
-                <li>uppercase letters</li>
-                <li>lowercase letters</li>
-                <li>at least one number</li>
-                <li>at least one special character</li>
-                <li>between 8 and 16 characters</li>
-              </ul>
-            </ng-template>
-          </p-password>
-          <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && form.controls.password.touched">Password required</p>
-          <p class="help is-danger" *ngIf="form.controls.password.hasError('pattern') && form.controls.password.touched">Password must contain lowercase and uppercase letters, a number and at least a special character</p>
-        </div>
-      </div>
-
-      <div class="d-flex flex-row align-items-center mb-4">
-        <div class="repeatPassword-box form-outline flex-fill mb-0">
-          <input placeholder="ripetiPassword" type="password" id="ripetiPassword" name="ripetiPassword" formControlName="ripetiPassword" class="form-control" (ngModelChange)="checkPassword()"/>
-          <p class="help is-danger" *ngIf="!checkPassword() && form.controls.ripetiPassword.dirty">Passwords do not match</p>
-        </div>
-      </div>
-
-      <div class="accept-box form-check d-flex justify-content-center mb-5">
-        <input placeholder="accetto" type="checkbox" id="accetto" name="accetto" formControlName="accetto" class="form-check-input me-2"/>
-        <label class="accetto-label" for="accetto">
-          I agree with the <a>Terms of service</a>
-        </label>
-      </div>
-
-      <div class="register-button d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-        <button type="submit" class="btn btn-primary btn-lg" [disabled]="!form.valid">Sign up</button>
-      </div>
-
-    </form>
-  </div>
-  <div class="col-xl-7  order-1 order-lg-2 colonna-dx" [ngStyle]="{'background-image': 'url(src\assets\images\sign-up-1.jpg)'}">
-
-  </div>
-</div> -->
-
-<!-- VECCHIO REGISTRATION FORM -->
-<!-- <div class="row contenitore" style="border-radius: 25px;">
-  <div class="col-xl-5 order-2 order-lg-1">
-
-    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Registrati</p>
-
-    <form class="mx-1 mx-md-4" [formGroup]="form" (ngSubmit)="onSubmit()">
-
-        <div class="form-outline flex-fill mb-0">
-          <i class="pi pi-user" ></i>
-          <input placeholder="nominativo" type="text" id="name" name="name" formControlName="name" class="form-control"/>
-          <label class="form-label" for="name">Il tuo nome</label>
-          <p class="help is-danger" *ngIf="!form.get('name').valid && form.get('name').touched">Il campo nome è obbligatorio</p>
-        </div>
-
-        <div class="form-outline flex-fill mb-0">
-          <i class="pi pi-envelope" ></i>
-          <input placeholder="email" type="email" id="email" name="email" formControlName="email" class="form-control"/>
-          <label class="form-label" for="email">La tua email</label>
-          <p class="help is-danger" *ngIf="form.controls.email.hasError('required') && form.controls.email.touched">Il campo email è obbligatorio</p>
-          <p class="help is-danger" *ngIf="form.controls.email.hasError('email') && form.controls.email.touched">Il campo email deve contenere una mail valida</p>
-        </div>
-
-        <div class="form-outline flex-fill mb-0">
-          <i class="pi pi-lock" ></i>
-          <p-password formControlName="password" class="form-control" [toggleMask]="true" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$">
-          <label class="form-label" for="email">Password</label>
-          <ng-template pTemplate="header">
-            <h6>Scrivi una password</h6>
-          </ng-template>
-          <ng-template pTemplate="footer">
-            <p-divider></p-divider>
-            <p>Suggerimenti</p>
-            <ul style="line-height: 1.5;">
-              <li>una lettera minuscola</li>
-              <li>una lettera maiuscola</li>
-              <li>un numero</li>
-              <li>minimo 8 caratteri e massimo 16</li>
-            </ul>
-          </ng-template>
-         </p-password>
-
-          <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && form.controls.password.touched">Il campo password è obbligatorio</p>
-          <p class="help is-danger" *ngIf="form.controls.password.hasError('pattern') && form.controls.password.touched">Il campo password deve contenere 1 maiuscola, 1 minuscola, 1 numero, 1 carattere speciale e almeno 8 caratteri</p>
-        </div>
-
-        <div class="form-outline flex-fill mb-0">
-          <i class="pi pi-lock" ></i>
-          <input type="password" id="ripetiPassword" name="ripetiPassword" formControlName="ripetiPassword" class="form-control" (ngModelChange)="checkPassword()"/>
-          <label class="form-label" for="ripetiPassword">Ripeti password</label>
-          <p class="help is-danger" *ngIf="!checkPassword() && form.get('ripetiPassword').dirty">La password scritta non combacia</p>
-        </div>
-
-      <div class="accept-box">
-        <input class="form-check-input me-2" type="checkbox" value="" id="accetto" name="accetto" formControlName="accetto"/>
-        <label class="form-check-label" for="accetto">
-          Dichiaro di accettare i <a>Termini del servizio</a>
-        </label>
-      </div>
-
-
-      <div class="register-button">
-        <button type="submit" class="btn btn-primary btn-lg" [disabled]="!form.valid">Registrati</button>
-      </div>
-
-    </form>
-
-  </div>
-  <div class="col-xl-7  order-1 order-lg-2 colonna-dx">
-
-  </div>
-</div> -->
-
 <div class="row contenitore" style="border-radius: 25px;">
   <div class="col-xl-5 order-2 order-lg-1" id="colsx">
 
@@ -171,7 +8,7 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="username-box form-outline flex-fill mb-0">
           <i class="pi pi-user-edit"></i>
-          <input placeholder="Username" type="text" id="username" name="username" formControlName="username" class="form-control"/>
+          <input value="Yog-sothoth" placeholder="Username" type="text" id="username" name="username" formControlName="username" class="form-control"/>
           <p class="help is-danger" *ngIf="form.controls.username.hasError('required') && form.controls.username.touched">Username required</p>
         </div>
       </div>
@@ -188,7 +25,7 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-user" ></i>
-          <input placeholder="Lastname" type="text" id="surname" name="surname" formControlName="surname"  class="form-control"/>
+          <input value="Cthulhu" placeholder="Lastname" type="text" id="surname" name="surname" formControlName="surname"  class="form-control"/>
           <p class="help is-danger" *ngIf="form.controls.surname.hasError('required') && form.controls.surname.touched">Surname required</p>
           <p class="help is-danger" *ngIf="form.controls.surname.hasError('pattern') && form.controls.surname.touched">Surname must be between 3 and 30 characters</p>
         </div>

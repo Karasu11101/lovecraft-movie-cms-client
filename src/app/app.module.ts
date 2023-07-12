@@ -30,6 +30,7 @@ import { RegistrationModalComponent } from './shared/registration-modal/registra
 import { ProfileComponent } from './components/user/profile/profile.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

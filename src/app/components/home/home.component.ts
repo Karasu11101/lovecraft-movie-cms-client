@@ -22,6 +22,11 @@ export class HomeComponent implements OnInit {
   dateOfBirth: string;
 
   movies: Movie[];
+  username: string;
+  name: string;
+  surname: string;
+  email: string;
+
 
   constructor(private moviesService: MoviesService, private userService: UserService, private modalService: NgbModal) {}
 

@@ -50,5 +50,4 @@ export class MovieCardComponent {
     e.page = e.page + 1;
     this.page = e.page;
   }
-
 }

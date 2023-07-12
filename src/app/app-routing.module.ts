@@ -19,6 +19,7 @@ const routes: Routes = [
     { path: 'newMovie', component: NewMovieComponent },
     { path: '', component: MoviesListComponent, pathMatch: 'full' }
   ]},
+
   { path: 'registration', component: RegistrationComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'login', component: LoginComponent },
