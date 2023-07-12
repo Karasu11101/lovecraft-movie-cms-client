@@ -171,7 +171,7 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="username-box form-outline flex-fill mb-0">
           <i class="pi pi-user-edit"></i>
-          <input placeholder="Username" type="text" id="username" name="username" formControlName="username" class="form-control"/>
+          <input value="Yog-sothoth" placeholder="Username" type="text" id="username" name="username" formControlName="username" class="form-control"/>
           <p class="help is-danger" *ngIf="form.controls.username.hasError('required') && form.controls.username.touched">Username required</p>
         </div>
       </div>
@@ -188,7 +188,7 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-user" ></i>
-          <input placeholder="Lastname" type="text" id="surname" name="surname" formControlName="surname"  class="form-control"/>
+          <input value="Cthulhu" placeholder="Lastname" type="text" id="surname" name="surname" formControlName="surname"  class="form-control"/>
           <p class="help is-danger" *ngIf="form.controls.surname.hasError('required') && form.controls.surname.touched">Surname required</p>
           <p class="help is-danger" *ngIf="form.controls.surname.hasError('pattern') && form.controls.surname.touched">Surname must be between 3 and 30 characters</p>
         </div>
@@ -198,7 +198,7 @@
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-envelope" ></i>
           <input placeholder="Email" type="email" id="email" name="email"  formControlName="email" class="form-control"/>
-          <p class="help is-danger" *ngIf="form.controls.email.hasError('required') && form.controls.email.touched">Email required</p>
+          <p class="help is-danger" *ngIf="form.controls.email.hasError('required') && form.controls.email.touched">Email is necessary</p>
           <p class="help is-danger" *ngIf="form.controls.email.hasError('email') && form.controls.email.touched">Please insert a valid mail</p>
         </div>
       </div>
@@ -215,8 +215,7 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-lock" ></i>
-          <p-password name="password" formControlName="password" class="form-control" [toggleMask]="true" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$"
-          styleClass="p-password p-component p-inputwrapper p-input-icon-right" [style]="{'width':'100%'}" [inputStyle]="{'width':'100%'}">
+          <p-password formControlName="password" class="form-control" [toggleMask]="true" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$">
             <ng-template pTemplate="header">
               <h6>Inserisci password</h6>
             </ng-template>
@@ -241,8 +240,8 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-key" ></i>
-          <input type="password" id="ripetiPassword" name="repeatPassword" formControlName="ripetiPassword" class="form-control" (ngModelChange)="checkPassword()"/>
-          <p class="help is-danger" *ngIf="!checkPassword() && form.controls.ripetiPassword.dirty">Passwords don't match</p>
+          <input type="password" id="ripetiPassword" name="ripetiPassword" formControlName="ripetiPassword" class="form-control" (ngModelChange)="checkPassword()"/>
+          <p class="help is-danger" *ngIf="!checkPassword() && form.controls.ripetiPassword.dirty">Passwords do not match</p>
         </div>
       </div>
 
@@ -427,7 +426,7 @@
   </div>
 </ng-template>
 
-<!-- <ng-template #modalDue let-modal>
+<ng-template #modalDue let-modal>
   <div class="modal-header">
     <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
   </div>
@@ -438,4 +437,4 @@
     <button type="button" class="btn" aria-label="cancel" (click)="modal.dismiss()">ANNULLA</button>
     <button type="button" class="btn btn-primary" aria-label="action" (click)="modal.close()">AZIONE DA COMPIERE</button>
   </div>
-</ng-template> -->
+</ng-template>

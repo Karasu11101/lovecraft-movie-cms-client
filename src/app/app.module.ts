@@ -40,10 +40,6 @@ import { LoginComponent } from './components/user/login/login.component';
     DetailComponent,
     MoviesListComponent,
     RegistrationComponent,
-    ButtonShadowDirective,
-    WhiteShadowBoxDirective,
-    NewMovieComponent,
-    LoginComponent,
   ],
   imports: [
     BrowserModule,

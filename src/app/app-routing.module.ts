@@ -18,10 +18,9 @@ const routes: Routes = [
     { path: 'newMovie', component: NewMovieComponent },
     { path: '', component: MoviesListComponent, pathMatch: 'full' }
   ]},
-  { path: 'registration', component: RegistrationComponent },
-  { path: 'signIn', component: LoginComponent },
-  { path: '404', component: NotfoundComponent },
-  { path: '**', redirectTo: '404', pathMatch: 'full' },
+  { path: 'registration', component: RegistrationComponent},
+  { path: '404', component: NotfoundComponent},
+  { path: '**', redirectTo: '404', pathMatch: 'full'},
 ];
 
 @NgModule({
