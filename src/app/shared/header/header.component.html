@@ -16,10 +16,13 @@
     </div>
     <div class="column right">
       <a class="nav-link" id="registrationLink" routerLink='login' routerLinkActive="active" *ngIf="!auth.isLogged()">Sign-in</a>
-      <ul *ngIf="auth.isLogged()">
-        <li><strong>Greetings {{user.username}}!</strong></li>
-        <li><a class="nav-link" (click)="logout()" style="cursor: pointer">Log-out</a></li>
-      </ul>
+      <div id="signup">
+        <ul *ngIf="auth.isLogged()">
+          <li><strong>Greetings {{user.username}}! [</strong></li>
+          <li><a class="nav-link" routerLink="profile" routerLinkActive="active">Profile - </a></li>
+          <li><a class="nav-link" (click)="logout()" style="cursor: pointer">Log-out ]</a></li>
+        </ul>
+      </div>
       <!-- <span class="insta"><i class="pi pi-instagram"></i></span>
       <span class="discord"><i class="pi pi-discord"></i></span>
       <span class="twitter"><i class="pi pi-twitter"></i></span> -->

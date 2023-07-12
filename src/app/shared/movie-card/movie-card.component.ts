@@ -22,6 +22,10 @@ export class MovieCardComponent {
 
   constructor(private moviesService: MoviesService, private userService: UserService) {}
 
+  ngOnInit(): void {
+
+  }
+
   accorciaTesto(descrizione: string): number {
     let lunghezzaMassima = 180;
     if(descrizione.length <= lunghezzaMassima) {

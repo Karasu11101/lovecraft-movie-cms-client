@@ -3,6 +3,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MoviesService } from 'src/app/services/movies.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import * as DecoupledEditor from '@ckeditor/ckeditor5-build-decoupled-document';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-new-movie',
@@ -20,7 +22,13 @@ export class NewMovieComponent {
     confirm: new FormControl(false, Validators.requiredTrue)
   })
 
-  constructor(private router: Router, private moviesService: MoviesService, private movieModal: NgbModal) {}
+  description: SafeHtml;
+  Editor: any = DecoupledEditor;
+
+  constructor(private router: Router,
+    private moviesService: MoviesService,
+    private movieModal: NgbModal,
+    private sanitizer: DomSanitizer) {}
 
   onSubmit() {
     console.log(this.form.value);
@@ -30,6 +38,7 @@ export class NewMovieComponent {
       image: this.form.value.image
     }
     this.moviesService.createMovie(movie).subscribe((res: any) => {
+      this.description = this.sanitizer.bypassSecurityTrustHtml(res.description);
       this.open(this.modal, res.image);
     });
   }
@@ -44,6 +53,13 @@ export class NewMovieComponent {
         console.log('redirected to movies page');
         this.router.navigateByUrl('movies');
       })
+  }
+
+  onReady(editor) {
+    editor.ui.view.editable.element.parentElement.insertBefore(
+      editor.ui.view.toolbar.element,
+      editor.ui.view.editable.element
+    );
   }
 
 }

@@ -5,19 +5,18 @@ import { MessageService } from 'primeng/api';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
-  providers: [MessageService]
+  selector: 'app-registration-modal',
+  templateUrl: './registration-modal.component.html',
+  styleUrls: ['./registration-modal.component.scss']
 })
-export class LoginComponent {
+export class RegistrationModalComponent {
   loginError = "";
 
   constructor(private auth: AuthService, private router: Router, private messageService: MessageService, private userService: UserService) {}
 
   onSubmit(form) {
-    if(form.username != '' && form.password != '') {
-      this.auth.login(form.username, form.password).subscribe({
+    if(form.email != '' && form.password != '') {
+      this.auth.login(form.email, form.password).subscribe({
         next: (res) => {
           if(res) {
             this.auth.saveStorage(res);
@@ -41,5 +40,4 @@ export class LoginComponent {
       })
     }
   }
-
 }

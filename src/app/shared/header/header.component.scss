@@ -84,12 +84,35 @@
 a {
   font-family: 'Tulpen One', cursive!important;
   padding-left: 15px;
+  padding-right: 15px;
   cursor: pointer;
   text-decoration: none;
   color: $secondary-color-1;
   text-shadow: 0.5px 0.5px grey;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 900;
   vertical-align: middle;
+}
+
+#signup {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    list-style: none;
+    align-items: center;
+  }
+
+  li {
+    color: $secondary-color-1;
+    font-size: 30px;
+    font-family: 'Tulpen One', cursive!important;
+    text-shadow: 0.5px 0.5px grey;
+  }
 }
 

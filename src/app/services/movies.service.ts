@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Movie } from '../models/movie.model';
 import { MOVIES } from '../mocks/movies.mock';
-import { Observable, of } from 'rxjs';
+import { Observable, of, ReplaySubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class MoviesService {
 
   apiBaseUrl = 'api/movies';
+  movieData = new ReplaySubject();
 
   constructor(private http: HttpClient) { }
 
