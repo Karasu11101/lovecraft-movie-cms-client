@@ -1,5 +1,5 @@
 <header>
-  <div class="row bg-darker">
+  <!-- <div class="row bg-darker">
     <div class="column left">
       <a routerLink="home">
         <img routerLink="home" src="../assets/images/cthulhu-logo2.png" alt="cthulhu logo" class="logo" index="logo-id">
@@ -8,7 +8,6 @@
         <a class="homeLink" routerLink="home">Home</a>
         <a class="bookLink">Books</a>
         <a class="movieLink" routerLink="movies">Movies</a>
-        <!-- <a class="registrationLink" routerLink="registration">Sign-up</a> -->
       </span>
     </div>
     <div class="column middle">
@@ -18,14 +17,60 @@
       <a class="nav-link" id="registrationLink" routerLink='login' routerLinkActive="active" *ngIf="!auth.isLogged()">Sign-in</a>
       <div id="signup">
         <ul *ngIf="auth.isLogged()">
-          <li><strong>Greetings {{user.username}}! [</strong></li>
-          <li><a class="nav-link" routerLink="profile" routerLinkActive="active">Profile - </a></li>
+          <li><strong>Greetings {{user.username}}! </strong></li>
+          <li><a class="nav-link" routerLink="profile" routerLinkActive="active">[ Profile - </a></li>
           <li><a class="nav-link" (click)="logout()" style="cursor: pointer">Log-out ]</a></li>
         </ul>
       </div>
-      <!-- <span class="insta"><i class="pi pi-instagram"></i></span>
-      <span class="discord"><i class="pi pi-discord"></i></span>
-      <span class="twitter"><i class="pi pi-twitter"></i></span> -->
     </div>
-  </div>
+  </div> -->
+
+  <nav class="navbar navbar-light bg-darker fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img routerLink="home" src="../assets/images/cthulhu-logo2.png" alt="cthulhu logo" class="logo" index="logo-id">
+      </a>
+      <div id="title-header">
+        <h1>Eldritch Vault</h1>
+      </div>
+      <button id="menu-button" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span id="menu-span" class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Eldritch Vault</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="movies">Movies</a>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sign in
+              </button>
+              <div *ngIf="!auth.isLogged()">
+                <ul>
+                  <li><a class="nav-link" routerLink="profile" routerLinkActive="active">Profile</a></li>
+                  <li><a class="nav-link" (click)="logout()" style="cursor: pointer">Log out</a></li>
+                </ul>
+              </div>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
 </header>

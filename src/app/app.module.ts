@@ -28,6 +28,7 @@ import { NewMovieComponent } from './components/movies/new-movie/new-movie.compo
 import { LoginComponent } from './components/user/login/login.component';
 import { RegistrationModalComponent } from './shared/registration-modal/registration-modal.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 
 
@@ -50,6 +51,7 @@ import { ProfileComponent } from './components/user/profile/profile.component';
     LoginComponent,
     RegistrationModalComponent,
     ProfileComponent,
+    ContactsComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,8 +64,8 @@ import { ProfileComponent } from './components/user/profile/profile.component';
     DividerModule,
     PaginatorModule,
     HttpClientModule,
-    ToastModule,
-    CKEditorModule
+    CKEditorModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

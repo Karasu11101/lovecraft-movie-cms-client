@@ -117,3 +117,23 @@ body {
     box-shadow: none!important;
   }
 }
+
+.logo {
+  vertical-align: middle;
+  height: 80px;
+  padding-left: 10px;
+}
+
+#menu-button {
+  border: 2px solid $primary-color-1;
+  :focus{
+    outline: 0!important;
+  }
+}
+
+#title-header {
+  color: $secondary-color-1;
+  font-family: 'Cinzel Decorative', cursive!important;
+  font-weight: 700!important;
+  font-size: 30px;
+}

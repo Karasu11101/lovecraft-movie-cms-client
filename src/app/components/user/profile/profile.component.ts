@@ -16,15 +16,15 @@ export class ProfileComponent implements OnInit{
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-
+    this.retrieveProfile(JSON.parse(localStorage.getItem('user')).email);
   }
 
   retrieveProfile(email: string) {
     this.userService.getUser(email).pipe(first()).subscribe({
       next: res => {
         this.data = res;
-        this.birthdate = moment(this.data.birthdate).locale('uk').format('dddd DD MMMM YYYY');
-        this.registrationDate = moment(this.data.createdAt).locale('uk').format('dddd DD MMMM YYYY');
+        this.birthdate = moment(this.data.birthdate).locale('en').format('dddd DD MMMM YYYY');
+        this.registrationDate = moment(this.data.createdAt).locale('en').format('dddd DD MMMM YYYY');
       }
     })
   }
