@@ -42,35 +42,88 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="movies">Movies</a>
-            </li>
-            <li class="dropdown">
-              <button class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" routerLink="movies">Movies</a>
+            <a class="signin-button" *ngIf="!auth.isLogged()" (click)="open(modalLogin)" data-bs-dismiss="offcanvas">
                 Sign in
-              </button>
-              <div *ngIf="!auth.isLogged()">
-                <ul>
-                  <li><a class="nav-link" routerLink="profile" routerLinkActive="active">Profile</a></li>
-                  <li><a class="nav-link" (click)="logout()" style="cursor: pointer">Log out</a></li>
-                </ul>
-              </div>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </a>
+            <div *ngIf="auth.isLogged()" class="inner-signup">
+              <ul>
+                <li><a class="nav-link" routerLink="profile" routerLinkActive="active">[ Profile</a></li>
+                <li> - </li>
+                <li><a class="nav-link" (click)="logout()" style="cursor: pointer">Log out ]</a></li>
               </ul>
-            </li>
-          </ul>
+            </div>
         </div>
       </div>
     </div>
   </nav>
 </header>
+
+
+<ng-template id="loginModal" #modalLogin let-modal>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button id="close" type="button" class="btn-close" aria-label="lose" (click)="modal.dismiss()"></button>
+      </div>
+      <div class="modal-body">
+        <section>
+          <div id="backgroundLogin">
+            <h2>Sign In</h2>
+            <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+              <div class="row">
+                <label class="form-label" for="email">Username</label>
+                <input type="text" name="username" class="form-control" placeholder="Username" ngModel required="true">
+              </div>
+
+              <div class="row">
+                <label class="form-label" for="password">Password</label>
+                <!-- <input type="password" name="password" class="form-control" placeholder="scrivi qui la tua password"> -->
+                <p-password ngModel name="password" class="form-control" placeholder="Password" [toggleMask]="true" [feedback]="false" required="true">
+                </p-password>
+              </div>
+
+              <div class="row">
+                <button class="btn btn-primary">Sign In</button>
+              </div>
+              <div class="alert alert-danger" *ngIf="loginError">
+                {{loginError}}
+              </div>
+            </form>
+
+            <div id="registrati">
+              If you haven't already, you can sign up <a routerLink="/registration">here</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-closeModal" aria-label="cancel" (click)="modal.dismiss()">CANCEL</button>
+        <button id="homeButton" type="button" class="btn btn-primary" aria-label="back to home" (click)="modal.close()">HOME</button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
+<!-- <ul id="header-ul" class="navbar-nav justify-content-end flex-grow-1 pe-3">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="movies">Movies</a>
+  </li>
+  <li id="signup">
+    <a class="signin-button" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Sign in
+    </a>
+    <div *ngIf="!auth.isLogged()" class="inner-signup">
+      <ul>
+        <li><a class="nav-link" routerLink="profile" routerLinkActive="active">[ Profile</a></li>
+        <li> - </li>
+        <li><a class="nav-link" (click)="logout()" style="cursor: pointer">Log out ]</a></li>
+      </ul>
+    </div>
+  </li>
+</ul> -->

@@ -101,6 +101,7 @@ a {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  color: white;
 
   ul {
     display: flex;
@@ -111,10 +112,22 @@ a {
   }
 
   li {
-    color: $secondary-color-1;
+    color: $secondary-color-5;
     font-size: 30px;
     font-family: 'Tulpen One', cursive!important;
     text-shadow: 0.5px 0.5px grey;
   }
 }
 
+// .modal-content {
+//   top: 0;
+//   left: 0;
+//   position: fixed;
+//   background-color: rgba(0, 0, 0, 0.442);
+//   height: 100%;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 99999;
+// }

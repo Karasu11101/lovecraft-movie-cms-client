@@ -137,3 +137,10 @@ body {
   font-weight: 700!important;
   font-size: 30px;
 }
+
+#header-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  color: $secondary-color-5!important;
+}
