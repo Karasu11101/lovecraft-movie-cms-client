@@ -1,20 +1,20 @@
-<section>
-  <div id="backgroundLogin">
+<section class="login-section">
+  <div class="backgroundLogin">
     <h2>Sign In</h2>
     <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
-      <div class="row">
-        <label class="form-label" for="email">Username</label>
-        <input type="text" name="username" class="form-control" placeholder="Username" ngModel required="true">
+      <div class="row-login">
+        <label class="form-label loginLabel" for="email">Email</label>
+        <input type="text" name="email" class="form-control" placeholder="Email" ngModel required="true">
       </div>
 
-      <div class="row">
-        <label class="form-label" for="password">Password</label>
+      <div class="row-login">
+        <label class="form-label loginLabel" for="password">Password</label>
         <!-- <input type="password" name="password" class="form-control" placeholder="scrivi qui la tua password"> -->
         <p-password ngModel name="password" class="form-control" placeholder="Password" [toggleMask]="true" [feedback]="false" required="true">
         </p-password>
       </div>
 
-      <div class="row">
+      <div class="row-login">
         <button class="btn btn-primary">Sign In</button>
       </div>
       <div class="alert alert-danger" *ngIf="loginError">
@@ -22,7 +22,7 @@
       </div>
     </form>
 
-    <div id="registrati">
+    <div class="register">
       If you haven't already, you can sign up <a routerLink="/registration">here</a>
     </div>
   </div>

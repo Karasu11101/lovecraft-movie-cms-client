@@ -62,7 +62,9 @@
 
 
 <ng-template id="loginModal" #modalLogin let-modal>
-  <div class="modal-dialog">
+
+  <app-login></app-login>
+  <!-- <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button id="close" type="button" class="btn-close" aria-label="lose" (click)="modal.dismiss()"></button>
@@ -79,7 +81,6 @@
 
               <div class="row">
                 <label class="form-label" for="password">Password</label>
-                <!-- <input type="password" name="password" class="form-control" placeholder="scrivi qui la tua password"> -->
                 <p-password ngModel name="password" class="form-control" placeholder="Password" [toggleMask]="true" [feedback]="false" required="true">
                 </p-password>
               </div>
@@ -103,7 +104,7 @@
         <button id="homeButton" type="button" class="btn btn-primary" aria-label="back to home" (click)="modal.close()">HOME</button>
       </div>
     </div>
-  </div>
+  </div> -->
 </ng-template>
 
 

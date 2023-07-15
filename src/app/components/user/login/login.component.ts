@@ -16,17 +16,17 @@ export class LoginComponent {
   constructor(private auth: AuthService, private router: Router, private messageService: MessageService, private userService: UserService) {}
 
   onSubmit(form) {
-    if(form.username != '' && form.password != '') {
-      this.auth.login(form.username, form.password).subscribe({
+    if(form.email != '' && form.password != '') {
+      this.auth.login(form.email, form.password).subscribe({
         next: (res) => {
           if(res) {
             this.auth.saveStorage(res);
 
             this.userService.userRole.next(res.role);
 
-            this.messageService.add({severity: 'error', summary: 'Login error', detail: 'Username or password are incorrect', life: 2000});
+            this.messageService.add({severity: 'success', summary: 'Login', detail: 'Welcome ' + res.username + '!', life: 2000});
             setTimeout(() => {
-              this.router.navigateByUrl('home');
+              location.reload();
             }, 2000);
           } else {
             this.loginError = 'Username or password are incorrect';

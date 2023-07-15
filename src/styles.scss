@@ -165,15 +165,77 @@ body {
   }
 }
 
-// #navbar-home #navbar-movies #navbar-signin {
-//   font-family: "Tulpen One", cursive !important;
-//   padding-left: 15px;
-//   padding-right: 15px;
-//   cursor: pointer;
-//   text-decoration: none;
-//   color: white!important;
-//   text-shadow: 1.5px 1.5px 1px rgb(255, 249, 249)!important;
-//   font-size: 30px;
-//   /* font-weight: 900; */
-//   vertical-align: middle;
-// }
+#login-section {
+  width: 50%;
+  margin: 50px auto 50px auto;
+
+  // h2 {
+  //   text-align: center;
+  //   font-weight: 900;
+  //   color: $secondary-color-5;
+  // }
+
+  // button {
+  //   margin: 37px auto;
+  //   background-color: $primary-color-2;
+  //   color: $secondary-color-5;
+  //   font-weight: 600;
+  //   border: none;
+  //   height: 50px;
+  //   width: 200px;
+  // }
+
+
+
+  // label {
+  //   margin-bottom: -1px;
+  //   margin-left: -10px;
+  //   font-size: 14px;
+  //   font-weight: 600;
+  //   color: $secondary-color-5;
+  // }
+
+
+}
+
+#backgroundLogin {
+  h2 {
+    text-align: center;
+    font-weight: 900;
+    color: $secondary-color-5;
+  }
+
+  button {
+    margin: 37px auto;
+    background-color: $primary-color-2;
+    color: $secondary-color-5;
+    font-weight: 600;
+    border: none;
+    height: 50px;
+    width: 200px;
+  }
+
+  label {
+    margin-bottom: -1px;
+    margin-left: -10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $secondary-color-5;
+  }
+}
+.row-login {
+  margin-top: 29px;
+}
+#registrati {
+  text-align: center;
+  font-size: 18px;
+  color: $secondary-color-5;
+
+  a {
+    text-decoration: none;
+    color: $primary-color-1;
+    font-weight: 600;
+    color: $primary-color-5;
+  }
+}
+
