@@ -42,9 +42,9 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" routerLink="movies">Movies</a>
-            <a class="signin-button" *ngIf="!auth.isLogged()" (click)="open(modalLogin)" data-bs-dismiss="offcanvas">
+            <a id="navbar-home" class="nav-link active" aria-current="page">Home</a>
+            <a id="navbar-movies" class="nav-link" routerLink="movies">Movies</a>
+            <a id="navbar-signin" class="signin-button" *ngIf="!auth.isLogged()" (click)="open(modalLogin)" data-bs-dismiss="offcanvas">
                 Sign in
             </a>
             <div *ngIf="auth.isLogged()" class="inner-signup">
@@ -93,7 +93,7 @@
             </form>
 
             <div id="registrati">
-              If you haven't already, you can sign up <a routerLink="/registration">here</a>
+              If you haven't already, you can sign up <a routerLink="/registration" data-dismiss="loginModal">here</a>
             </div>
           </div>
         </section>
