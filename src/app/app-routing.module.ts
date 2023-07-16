@@ -10,6 +10,10 @@ import { RegistrationComponent } from './components/user/registration/registrati
 import { NewMovieComponent } from './components/movies/new-movie/new-movie.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
+import { BooksComponent } from './components/books/books.component';
+import { BookDetailComponent } from './components/books/detail/book-detail.component';
+import { NewBookComponent } from './components/books/new-book/new-book.component';
+import { BooksListComponent } from './components/books/books-list/books-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,7 +23,11 @@ const routes: Routes = [
     { path: 'newMovie', component: NewMovieComponent },
     { path: '', component: MoviesListComponent, pathMatch: 'full' }
   ]},
-
+  { path: 'books', component: BooksComponent, children: [
+    { path: 'detail/:title/:_id', component: BookDetailComponent },
+    { path: 'newBook', component: NewBookComponent },
+    { path: '', component: BooksListComponent, pathMatch: 'full'}
+  ]},
   { path: 'registration', component: RegistrationComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'login', component: LoginComponent },

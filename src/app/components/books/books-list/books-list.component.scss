@@ -1,0 +1,35 @@
+@import '../../../styles/colors.scss';
+
+.booksContainer {
+  padding: 20px 20px;
+
+  h2 {
+    font-weight: 700;
+  }
+
+  h4 {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    color: $secondary-color-5;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $secondary-color-5;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .li-before {
+    content: '';
+  }
+}
