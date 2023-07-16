@@ -1,0 +1,35 @@
+@import '../../../styles/colors.scss';
+
+.book-detail-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  color: $secondary-color-5;
+  .main-div {
+    height: 100%;
+    width: 48%;
+    margin-right: 2%;
+  }
+
+  .secondary-div {
+    height: 100%;
+    width: 48%;
+    margin-left: 2%;
+  }
+}
+
+.img-div {
+  height:100%;
+  width: 100%;
+
+  #detail-image {
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+

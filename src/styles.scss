@@ -169,12 +169,6 @@ body {
     text-shadow: 0.0px 0.0px 6px rgb(0, 0, 0)!important;
     font-weight: 400;
   }
-
-  // span:hover {
-  //   color: white!important;
-  //   text-shadow: 0.0px 0.0px 6px rgb(0, 0, 0)!important;
-  //   font-weight: 400;
-  // }
 }
 
 @media screen and (max-width: 550px) {
@@ -188,5 +182,16 @@ body {
   .offcanvas {
     width: 200px!important;
   }
+}
 
+.fixed-top {
+  position: relative!important;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.offcanvas-backdrop {
+  display: none !important;
 }
