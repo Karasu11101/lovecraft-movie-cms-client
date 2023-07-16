@@ -48,11 +48,11 @@
                 Sign in
             </a>
             <div *ngIf="auth.isLogged()" class="inner-signup">
-              <ul>
-                <li><a class="nav-link" routerLink="profile" routerLinkActive="active">[ Profile</a></li>
-                <li> - </li>
-                <li><a class="nav-link" (click)="logout()" style="cursor: pointer">Log out ]</a></li>
-              </ul>
+              <span>[</span>
+              <a class="nav-link" routerLink="profile" routerLinkActive="active">Profile</a>
+              <span> - </span>
+              <a class="nav-link" (click)="logout()" style="cursor: pointer">Log out</a>
+              <span>]</span>
             </div>
         </div>
       </div>

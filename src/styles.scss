@@ -45,7 +45,7 @@ body {
   .moviePoster {
     margin: auto;
     width: 100%!important;
-    height: 120%!important;
+    height: 800px!important;
     text-align: center!important;
   }
   .carousel-inner {
@@ -138,18 +138,12 @@ body {
   font-size: 30px;
 }
 
-// #header-ul {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: baseline;
-//   color: $secondary-color-5!important;
-// }
-
 .offcanvas-body {
   a {
     font-family: "Tulpen One", cursive !important;
-    padding-left: 15px;
-    padding-right: 15px;
+    // padding-left: 15px;
+    // padding-right: 15px;
+    margin-bottom: 20px;
     cursor: pointer;
     text-decoration: none;
     color: black!important;
@@ -158,84 +152,41 @@ body {
     font-weight: 900;
     vertical-align: middle;
   }
+  span {
+    font-family: "Tulpen One", cursive !important;
+    cursor: pointer;
+    text-decoration: none;
+    color: black!important;
+    text-shadow: 0.0px 0.0px 6px rgb(255, 249, 249)!important;
+    font-size: 30px;
+    font-weight: 900;
+    vertical-align: middle;
+    margin-bottom: 20px;
+  }
+
   a:hover {
     color: white!important;
     text-shadow: 0.0px 0.0px 6px rgb(0, 0, 0)!important;
     font-weight: 400;
   }
-}
 
-#login-section {
-  width: 50%;
-  margin: 50px auto 50px auto;
-
-  // h2 {
-  //   text-align: center;
-  //   font-weight: 900;
-  //   color: $secondary-color-5;
+  // span:hover {
+  //   color: white!important;
+  //   text-shadow: 0.0px 0.0px 6px rgb(0, 0, 0)!important;
+  //   font-weight: 400;
   // }
-
-  // button {
-  //   margin: 37px auto;
-  //   background-color: $primary-color-2;
-  //   color: $secondary-color-5;
-  //   font-weight: 600;
-  //   border: none;
-  //   height: 50px;
-  //   width: 200px;
-  // }
-
-
-
-  // label {
-  //   margin-bottom: -1px;
-  //   margin-left: -10px;
-  //   font-size: 14px;
-  //   font-weight: 600;
-  //   color: $secondary-color-5;
-  // }
-
-
 }
 
-#backgroundLogin {
-  h2 {
-    text-align: center;
-    font-weight: 900;
-    color: $secondary-color-5;
+@media screen and (max-width: 550px) {
+  .moviePoster {
+    margin: auto;
+    width: 100%!important;
+    height: 600px!important;
+    text-align: center!important;
   }
 
-  button {
-    margin: 37px auto;
-    background-color: $primary-color-2;
-    color: $secondary-color-5;
-    font-weight: 600;
-    border: none;
-    height: 50px;
-    width: 200px;
+  .offcanvas {
+    width: 200px!important;
   }
 
-  label {
-    margin-bottom: -1px;
-    margin-left: -10px;
-    font-size: 14px;
-    font-weight: 600;
-    color: $secondary-color-5;
-  }
 }
-.row-login {
-  margin-top: 29px;
-}
-#registrati {
-  text-align: center;
-  font-size: 18px;
-  color: $secondary-color-5;
-
-  a {
-    text-decoration: none;
-    color: $primary-color-1;
-    font-weight: 600;
-    color: $primary-color-5;
-  }
-}
-

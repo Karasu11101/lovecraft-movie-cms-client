@@ -119,15 +119,20 @@ a {
   }
 }
 
-// .modal-content {
-//   top: 0;
-//   left: 0;
-//   position: fixed;
-//   background-color: rgba(0, 0, 0, 0.442);
-//   height: 100%;
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   z-index: 99999;
-// }
+.offcanvas-title {
+  font-family: 'Tulpen One', cursive!important;
+  font-size: 30px;
+  font-weight: 600;
+  color: $secondary-color-1!important;
+  text-shadow: 0.0px 0.0px 6px rgb(255, 249, 249)!important;
+}
+
+.inner-signup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  span:hover {
+    color: white;
+    font-weight: 400;
+  }
+}
