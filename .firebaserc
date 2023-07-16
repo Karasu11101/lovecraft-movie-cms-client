@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "eldritch-vault"
+  },
+  "targets": {
+    "eldritch-vault": {
+      "hosting": {
+        "lovecraftian-movies": [
+          "eldritch-vault"
+        ]
+      }
+    }
+  }
+}
