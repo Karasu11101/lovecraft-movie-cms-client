@@ -1,7 +1,7 @@
 <div *ngIf="books$ | async" class="booksContainer">
   <h2>Feel free to browse our archive</h2>
   <div>
-    <h4>A-Z <a id="addBook" class="btn btn-primary" routerLink="/books/newBook" routerLinkActive="active" appWhiteShadow>Insert new book</a></h4>
+    <h4>A-Z <a *ngIf="role === '1411912'" id="addBook" class="btn btn-primary" routerLink="/books/newBook" routerLinkActive="active" appWhiteShadow>Insert new book</a></h4>
     <ul>
       <li *ngFor="let book of allBooks"><a routerLink="/books/detail/{{book.title}}/{{book._id}}">{{book.title}}</a></li>
     </ul>

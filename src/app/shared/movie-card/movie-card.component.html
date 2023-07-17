@@ -12,7 +12,7 @@
           <a routerLink="/movies/dettaglio/{{movie.title}}/{{movie._id}}" class="btn btn-primary" appButtonShadow>Delve deeper</a>
           <!-- <a [routerLink]="'dettaglio/'+recipe._id" class="btn btn-primary">Visualizza</a> -->
         </div>
-        <div class="admin-icon">
+        <div *ngIf="role === '1411912'" class="admin-icon">
           <button class='btn-admin' (click)="open(modalDelete, movie._id)"><i class="pi pi-trash"></i></button>
         </div>
       </div>

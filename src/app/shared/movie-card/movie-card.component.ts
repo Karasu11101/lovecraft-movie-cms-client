@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Movie } from 'src/app/models/movie.model';
 import { MoviesService } from 'src/app/services/movies.service';
 import { UserService } from 'src/app/services/user.service';
@@ -10,7 +10,7 @@ import { MOVIES } from 'src/app/mocks/movies.mock';
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss']
 })
-export class MovieCardComponent {
+export class MovieCardComponent implements OnInit {
   @Input() movies: Movie[];
   @Input() currentPage: string;
 
@@ -23,6 +23,18 @@ export class MovieCardComponent {
   extractedRole = this.userService.userRole.subscribe(res => this.role = res);
 
   constructor(private moviesService: MoviesService, private userService: UserService, private modal: NgbModal) {}
+
+  ngOnInit(): void {
+    this.role = JSON.parse(localStorage.getItem('user')).role;
+    console.log(localStorage);
+  }
+
+  ngDoCheck(): void {
+    if(JSON.parse(localStorage.getItem('user')) !== null) {
+      this.role = JSON.parse(localStorage.getItem('user')).role;
+      console.log(this.role);
+    }
+  }
 
   accorciaTesto(descrizione: string): number {
     let lunghezzaMassima = 180;
