@@ -2,6 +2,8 @@ import { Component, Input } from '@angular/core';
 import { Movie } from 'src/app/models/movie.model';
 import { MoviesService } from 'src/app/services/movies.service';
 import { UserService } from 'src/app/services/user.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { MOVIES } from 'src/app/mocks/movies.mock';
 
 @Component({
   selector: 'app-movie-card',
@@ -20,11 +22,7 @@ export class MovieCardComponent {
   role: any;
   extractedRole = this.userService.userRole.subscribe(res => this.role = res);
 
-  constructor(private moviesService: MoviesService, private userService: UserService) {}
-
-  ngOnInit(): void {
-
-  }
+  constructor(private moviesService: MoviesService, private userService: UserService, private modal: NgbModal) {}
 
   accorciaTesto(descrizione: string): number {
     let lunghezzaMassima = 180;
@@ -49,5 +47,19 @@ export class MovieCardComponent {
   paginate(e) {
     e.page = e.page + 1;
     this.page = e.page;
+  }
+
+  open(content: any, id: number) {
+    this.modal.open(content, { ariaLabelledBy: 'delete movie modal', size: 'm', centered: true}).result.then((res) => {
+      next: {
+        if(id > 0) {
+          MOVIES.splice(id - 1);
+        };
+      }
+    })
+    .catch((res) => {
+      console.log('exiting modal');
+    });
+    location.reload();
   }
 }

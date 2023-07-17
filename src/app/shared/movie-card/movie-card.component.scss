@@ -42,6 +42,18 @@
   }
 }
 
+.admin-icon {
+  background-color: $primary-color-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .btn-admin {
+    color: $secondary-color-5;
+    border: none;
+    background-color: $primary-color-1;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .container-card {
     width: 30%;
