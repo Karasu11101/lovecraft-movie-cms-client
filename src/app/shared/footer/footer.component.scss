@@ -32,6 +32,11 @@
   padding-top: 30px;
   width: 25%;
   white-space: nowrap!important;
+
+  a {
+    text-decoration: none;
+  color: $secondary-color-1;
+  }
 }
 
 .right {

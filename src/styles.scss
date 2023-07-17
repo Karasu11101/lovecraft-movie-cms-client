@@ -197,3 +197,17 @@ body {
   display: none !important;
 }
 
+.ck.ck-editor__editable_inline[dir=ltr] {
+  text-align: left;
+  background-color: white;
+}
+
+.ck-editor__editable {
+  min-height: 400px;
+  max-width: 100%;
+}
+
+.ck.ck-toolbar.ck-toolbar_grouping>.ck-toolbar__items {
+  display: flex!important;
+  justify-content: space-around!important;
+}

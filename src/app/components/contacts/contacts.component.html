@@ -1,13 +1,13 @@
 <section>
-  <h2>Compila il modulo per inviarci un messaggio</h2>
+  <h2>We'd love to hear your opinion!</h2>
   <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
     <div class="row">
-      <label class="form-label" for="nome">Nome</label>
-      <input type="text" name="name" class="form-control" placeholder="Nome" ngModel required="true">
+      <label class="form-label" for="nome">Name</label>
+      <input type="text" name="name" class="form-control" placeholder="Name" ngModel required="true">
     </div>
 
     <div class="row" id="gender">
-      <label id="title">Indica il genere: </label>
+      <label id="title">Gender:</label>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="gender" id="genderFemale">
         <label class="form-check-label" for="genderFemale">
@@ -34,12 +34,12 @@
     </div>
 
     <div class="row">
-      <label class="form-label" for="nome">Email</label>
+      <label class="form-label" for="nome">Message</label>
       <ckeditor [editor]="Editor" name="message"  class="form-control" placeholder="Scrivi qui il tuo messaggio" ></ckeditor>
     </div>
 
     <div class="row">
-      <button class="btn btn-primary">INVIA</button>
+      <button class="btn btn-primary">SEND</button>
     </div>
   </form>
 </section>

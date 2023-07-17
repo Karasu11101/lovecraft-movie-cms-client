@@ -1,5 +1,5 @@
 <div class="row contenitore" style="border-radius: 25px;">
-  <div class="col-xl-5 order-2 order-lg-1">
+  <div class="col-sm-6 mx-auto">
 
     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Create new movie sheet</p>
 
@@ -16,7 +16,7 @@
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-book" ></i>
           <!-- <input placeholder="Description" type="text" id="description" name="description" formControlName="description"  class="form-control"/> -->
-          <ckeditor style="height: 200px; background-color: white;" [editor]="Editor" class="movieDescription" formControlName="descritpion" (ready)="onReady($event)"></ckeditor>
+          <ckeditor style="height: 200px; background-color: white;" [editor]="Editor" class="movieDescription" formControlName="description" (ready)="onReady($event)"></ckeditor>
           <p class="help is-danger" *ngIf="form.controls.description.hasError('required') && form.controls.description.touched">Description is required</p>
         </div>
       </div>
