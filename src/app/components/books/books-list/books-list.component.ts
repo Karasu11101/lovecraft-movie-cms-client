@@ -11,12 +11,20 @@ import { take, first, Observable, map, delay} from 'rxjs';
 export class BooksListComponent {
   books$: Observable<Book[]>;
   allBooks = [];
+  sortedBooks = [];
 
   constructor(private booksService: BooksService) {
     this.books$ = this.booksService.getBooksAsync().pipe(
       delay(2500),
-      map(books => this.allBooks = books)
+      map(books => this.allBooks = books.sort(function (a, b) {
+              if (a.title < b.title) {
+                return -1;
+              }
+              if (a.title > b.title) {
+                return 1;
+              }
+              return 0;
+            }))
     );
-    this.allBooks.sort((a, b) => a.title.localeCompare(b.title));
   }
 }

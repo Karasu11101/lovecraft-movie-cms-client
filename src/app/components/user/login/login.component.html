@@ -15,7 +15,7 @@
       </div>
 
       <div class="row-login">
-        <button class="btn btn-primary">Sign In</button>
+        <button class="btn btn-primary" appWhiteShadow>Sign In</button>
       </div>
       <div class="alert alert-danger" *ngIf="loginError">
         {{loginError}}
@@ -23,7 +23,7 @@
     </form>
 
     <div class="register">
-      If you haven't already, you can sign up <a routerLink="/registration">here</a>
+      <span class="text">If you haven't already, you can sign up <a routerLink="/registration">here</a>.</span>
     </div>
   </div>
 </section>
