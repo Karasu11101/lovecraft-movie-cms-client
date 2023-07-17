@@ -34,3 +34,24 @@
     content: '';
   }
 }
+
+.loaderBackground {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  width: 100%;
+
+  img {
+    height: 120px;
+    width: 120px;
+  }
+
+  h3 {
+    color: $secondary-color-5;
+    font-weight: 900;
+    margin-top: 30px;
+  }
+
+}
