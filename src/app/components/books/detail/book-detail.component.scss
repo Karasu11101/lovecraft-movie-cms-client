@@ -1,46 +1,90 @@
 @import '../../../styles/colors.scss';
 
-.book-detail-container {
-  // display: flex;
-  // flex-direction: row;
-  // flex-wrap: nowrap;
-  // justify-content: center;
-  // align-items: center;
-  width: 100%;
-  padding: 30px;
-  color: $secondary-color-5;
-  .main-div {
-    height: 100%;
-    margin-right: 2%;
-  }
+// .book-detail-container {
+//   // display: flex;
+//   // flex-direction: row;
+//   // flex-wrap: nowrap;
+//   // justify-content: center;
+//   // align-items: center;
+//   width: 100%;
+//   padding: 30px;
+//   color: $secondary-color-5;
+//   .main-div {
+//     height: 100%;
+//     margin-right: 2%;
+//   }
 
-  h4 {
-    padding-top: 10px;
-  }
+//   h4 {
+//     padding-top: 10px;
+//   }
 
-  .secondary-div {
-    height: 100%;
-    border: 2px solid white;
+//   .secondary-div {
+//     height: 100%;
+//     border: 2px solid white;
 
-    li {
-      list-style: none;
-      margin-left: -10px;
-    }
-  }
+//     li {
+//       list-style: none;
+//       margin-left: -10px;
+//     }
+//   }
+// }
+
+// .img-div {
+//   height:100%;
+//   width: 100%;
+
+//   .detail-image {
+//     width:inherit;
+//     height: inherit;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     margin-bottom: 10px;
+//   }
+// }
+
+.detail-div {
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  height: auto;
 }
 
 .img-div {
-  height:100%;
-  width: 100%;
+  float: right;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid white;
+  width: 50%;
+  margin: 30px;
 
-  .detail-image {
-    width:inherit;
+  img {
+    margin-bottom: 5px;
     height: inherit;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 10px;
+    width: 100%;
   }
+
+  ul {
+    list-style: none;
+    color: $secondary-color-5;
+    font-size: 20px;
+  }
+}
+
+.text-div {
+  padding: 30px;
+  text-indent: 10px;
+
+  p {
+    text-align: justify;
+    font-size: 25px;
+    color: $secondary-color-5;
+  }
+}
+
+h2, h4 {
+  color: $secondary-color-5;
 }
 
 .backButton {

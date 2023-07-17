@@ -57,10 +57,11 @@ body {
   }
 
   .carousel-caption {
-    h3 {
+    a {
       font-family: 'Tulpen One', cursive;
       font-size: 40px;
       text-shadow: black 2px 3px 3px;
+      cursor: pointer;
     }
   }
 

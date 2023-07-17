@@ -4,7 +4,8 @@
     <img [src]="percorso + image.id + '.jpg'" [alt]="image.label" />
   </div>
   <div class="carousel-caption">
-    <h3>{{image.label}}</h3>
+    <!-- <h3>{{image.label}}</h3> -->
+    <a (click)="rerout(image.id, image.label)">{{image.label}}</a>
   </div>
   </ng-template>
 </ngb-carousel>

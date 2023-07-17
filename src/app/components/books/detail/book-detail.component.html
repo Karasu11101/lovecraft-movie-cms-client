@@ -18,23 +18,19 @@
 </div> -->
 
 <button class="backButton" (click)="goBack()"><i class="pi pi-arrow-left"></i> Back</button>
-<div class="book-detail-container">
-  <div class="main-div">
-    <div class="book-contents">
-      <h2>{{book.title}}</h2>
-      <h4>Plot:</h4>
-      <p>{{book.plot}}</p>
-    </div>
-    <div class="secondary-div">
-      <div class="img-div">
-        <img class="detail-image" src="{{book.image}}" style="float:right;">
-      </div>
-      <div class="details-div">
-        <ul class="details-list">
-          <li>Title: <strong>{{book.title}}</strong></li>
-          <li>Published: <strong>{{book.published}}</strong></li>
-        </ul>
-      </div>
-    </div>
+
+<div class="detail-div">
+  <h2>{{book.title}}</h2>
+  <div class="img-div">
+    <img class="detail-image" src="{{book.image}}" style="float:right;">
+    <ul class="details-list">
+      <li>Title: <strong>{{book.title}}</strong></li>
+      <li>Published: <strong>{{book.published}}</strong></li>
+    </ul>
+  </div>
+
+  <div class="text-div">
+    <h4>Plot:</h4>
+    <p>{{book.plot}}</p>
   </div>
 </div>

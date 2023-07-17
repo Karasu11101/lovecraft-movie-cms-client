@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
@@ -13,4 +14,10 @@ export class CarouselComponent {
     {id: 4, label: 'The Deep Ones'},
     {id: 5, label: 'The Call of Cthulhu'},
   ]
+
+  constructor(private router: Router) {}
+
+  rerout(id: number, title: string) {
+    this.router.navigateByUrl('/movies/dettaglio/' + title + '/' + id);
+  }
 }
