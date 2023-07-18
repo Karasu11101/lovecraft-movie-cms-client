@@ -25,7 +25,11 @@ export class MovieCardComponent implements OnInit {
   constructor(private moviesService: MoviesService, private userService: UserService, private modal: NgbModal) {}
 
   ngOnInit(): void {
-    this.role = JSON.parse(localStorage.getItem('user')).role;
+    if(JSON.parse(localStorage.getItem('user')) !== null) {
+      this.role = JSON.parse(localStorage.getItem('user')).role;
+    } else {
+      this.role = 'user';
+    }
     console.log(localStorage);
   }
 
@@ -33,6 +37,8 @@ export class MovieCardComponent implements OnInit {
     if(JSON.parse(localStorage.getItem('user')) !== null) {
       this.role = JSON.parse(localStorage.getItem('user')).role;
       console.log(this.role);
+    } else {
+      this.role = 'user';
     }
   }
 
