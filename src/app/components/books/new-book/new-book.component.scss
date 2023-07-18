@@ -18,6 +18,15 @@
     color: $secondary-color-5;
   }
 
+  label {
+    margin-left: 5px;
+    color: $secondary-color-5;
+  }
+
+  .description-input {
+    height: 300px;
+  }
+
   #confirm {
     color: $secondary-color-5;
   }

@@ -7,6 +7,7 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-pencil" ></i>
+          <label>Title</label>
           <input placeholder="Title" type="text" id="title" name="title" formControlName="title"  class="form-control"/>
           <p class="help is-danger" *ngIf="form.controls.title.hasError('required') && form.controls.title.touched">Title is required</p>
         </div>
@@ -15,6 +16,7 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-book" ></i>
+          <label>Description</label>
           <!-- <input placeholder="Description" type="text" id="description" name="description" formControlName="description"  class="form-control"/> -->
           <ckeditor style="height: 200px; background-color: white;" [editor]="Editor" class="movieDescription" formControlName="description" (ready)="onReady($event)"></ckeditor>
           <p class="help is-danger" *ngIf="form.controls.description.hasError('required') && form.controls.description.touched">Description is required</p>
@@ -24,6 +26,7 @@
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <i class="pi pi-camera" ></i>
+          <label>Image</label>
           <input placeholder="Load an image" type="text" id="image" name="image" formControlName="image"  class="form-control"/>
           <p class="help is-danger" *ngIf="form.controls.image.hasError('required') && form.controls.image.touched">Please upload an image</p>
           <div class="imageDiv" *ngIf="form.controls.image.value">

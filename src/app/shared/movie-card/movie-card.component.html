@@ -13,14 +13,14 @@
           <!-- <a [routerLink]="'dettaglio/'+recipe._id" class="btn btn-primary">Visualizza</a> -->
         </div>
         <div *ngIf="role === '1411912'" class="admin-icon">
-          <button class='btn-admin' (click)="open(modalDelete, movie._id)"><i class="pi pi-trash"></i></button>
+          <button class='btn-admin' type="button" (click)="open(modalDelete, movie._id)"><i class="pi pi-trash"></i></button>
         </div>
       </div>
 
-      <ng-template #modalDelete let-modal>
+      <ng-template #modalDelete let-modal class="modal-delete">
         <div class="modal-header">
           <h4>Warning</h4>
-          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+          <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="modal.dismiss()"></button>
         </div>
         <div class="modal-body">
           <h4>Are you sure you want to <strong>permanently</strong> delete this movie?</h4>

@@ -68,16 +68,11 @@ export class MovieCardComponent implements OnInit {
   }
 
   open(content: any, id: number) {
-    this.modal.open(content, { ariaLabelledBy: 'delete movie modal', size: 'm', centered: true}).result.then((res) => {
-      next: {
-        if(id > 0) {
-          MOVIES.splice(id - 1);
-        };
-      }
-    })
+    this.modal.open(content, { ariaLabelledBy: 'delete movie modal', size: 'default', centered: true}).result.then((res) => {
+        MOVIES.splice(id - 1, 1);
+      })
     .catch((res) => {
       console.log('exiting modal');
     });
-    location.reload();
   }
 }
