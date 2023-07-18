@@ -18,7 +18,7 @@
           <i class="pi pi-book" ></i>
           <label>Plot</label>
           <input class="description-input" placeholder="Description" type="text" id="description" name="description" formControlName="description"  class="form-control"/>
-          <!-- <ckeditor style="height: 200px; background-color: white;" [editor]="Editor" class="movieDescription" formControlName="description" (ready)="onReady($event)"></ckeditor> -->
+          <!-- <ckeditor background-color: white;" [editor]="Editor" class="movieDescription" formControlName="description" (ready)="onReady($event)"></ckeditor> -->
           <p class="help is-danger" *ngIf="form.controls.description.hasError('required') && form.controls.description.touched">Description is required</p>
         </div>
       </div>
