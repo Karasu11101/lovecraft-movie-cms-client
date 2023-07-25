@@ -20,7 +20,6 @@ export class MoviesListComponent implements OnInit {
   ngOnInit(): void {
     this.onGetMovies();
     this.role = JSON.parse(localStorage.getItem('user')).role;
-    console.log(localStorage);
   }
 
   ngDoCheck(): void {
