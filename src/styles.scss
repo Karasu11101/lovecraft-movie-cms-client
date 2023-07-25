@@ -45,7 +45,7 @@ body {
   .moviePoster {
     margin: auto;
     width: 100%!important;
-    height: 120%!important;
+    height: 800px!important;
     text-align: center!important;
   }
   .carousel-inner {
@@ -136,4 +136,57 @@ body {
   font-family: 'Cinzel Decorative', cursive!important;
   font-weight: 700!important;
   font-size: 30px;
+}
+
+.offcanvas-body {
+  a {
+    font-family: "Tulpen One", cursive !important;
+    // padding-left: 15px;
+    // padding-right: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black!important;
+    text-shadow: 0.0px 0.0px 6px rgb(255, 249, 249)!important;
+    font-size: 30px;
+    font-weight: 900;
+    vertical-align: middle;
+  }
+  span {
+    font-family: "Tulpen One", cursive !important;
+    cursor: pointer;
+    text-decoration: none;
+    color: black!important;
+    text-shadow: 0.0px 0.0px 6px rgb(255, 249, 249)!important;
+    font-size: 30px;
+    font-weight: 900;
+    vertical-align: middle;
+    margin-bottom: 20px;
+  }
+
+  a:hover {
+    color: white!important;
+    text-shadow: 0.0px 0.0px 6px rgb(0, 0, 0)!important;
+    font-weight: 400;
+  }
+
+  // span:hover {
+  //   color: white!important;
+  //   text-shadow: 0.0px 0.0px 6px rgb(0, 0, 0)!important;
+  //   font-weight: 400;
+  // }
+}
+
+@media screen and (max-width: 550px) {
+  .moviePoster {
+    margin: auto;
+    width: 100%!important;
+    height: 600px!important;
+    text-align: center!important;
+  }
+
+  .offcanvas {
+    width: 200px!important;
+  }
+
 }

@@ -7,7 +7,8 @@ import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-registration-modal',
   templateUrl: './registration-modal.component.html',
-  styleUrls: ['./registration-modal.component.scss']
+  styleUrls: ['./registration-modal.component.scss'],
+  providers: [MessageService]
 })
 export class RegistrationModalComponent {
   loginError = "";

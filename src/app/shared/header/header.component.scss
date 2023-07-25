@@ -101,6 +101,7 @@ a {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  color: white;
 
   ul {
     display: flex;
@@ -111,10 +112,27 @@ a {
   }
 
   li {
-    color: $secondary-color-1;
+    color: $secondary-color-5;
     font-size: 30px;
     font-family: 'Tulpen One', cursive!important;
     text-shadow: 0.5px 0.5px grey;
   }
 }
 
+.offcanvas-title {
+  font-family: 'Tulpen One', cursive!important;
+  font-size: 30px;
+  font-weight: 600;
+  color: $secondary-color-1!important;
+  text-shadow: 0.0px 0.0px 6px rgb(255, 249, 249)!important;
+}
+
+.inner-signup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  span:hover {
+    color: white;
+    font-weight: 400;
+  }
+}

@@ -29,6 +29,9 @@ import { LoginComponent } from './components/user/login/login.component';
 import { RegistrationModalComponent } from './shared/registration-modal/registration-modal.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { BooksComponent } from './components/books/books.component';
+import { NewBookComponent } from './components/books/new-book/new-book.component';
+import { BooksListComponent } from './components/books/books-list/books-list.component';
 
 
 
@@ -52,6 +55,9 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     RegistrationModalComponent,
     ProfileComponent,
     ContactsComponent,
+    BooksComponent,
+    NewBookComponent,
+    BooksListComponent,
   ],
   imports: [
     BrowserModule,

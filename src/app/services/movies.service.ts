@@ -15,23 +15,25 @@ export class MoviesService {
   constructor(private http: HttpClient) { }
 
   getMovies(): Observable<Movie[]> {
-    // return of (MOVIES);
-    return this.http.get<Movie[]>(`${this.apiBaseUrl}/`)
+    return of (MOVIES);
+    // return this.http.get<Movie[]>(`${this.apiBaseUrl}/`)
   }
 
   getMoviesAsync() {
-    // return of (MOVIES);
-    return this.http.get<Movie[]>(`${this.apiBaseUrl}/`)
+    return of (MOVIES);
+    // return this.http.get<Movie[]>(`${this.apiBaseUrl}/`)
   }
 
   getMovie(id: string): Observable<Movie> {
-    // const Movie = MovieS.find(movie => movie._id === id);
-    // return of (Movie);
-    return this.http.get<Movie>(`${this.apiBaseUrl}/${id}`)
+    const movie = MOVIES.find(movie => movie._id === Number(id));
+    return of (movie);
+    // return this.http.get<Movie>(`${this.apiBaseUrl}/${id}`)
   }
 
-  createMovie(movie: Movie): Observable<Movie> {
-    return this.http.post<Movie>(`${this.apiBaseUrl}/`, movie);
+  createMovie(movie: Movie): Observable<Movie[]> {
+    MOVIES.push(movie);
+    return of (MOVIES);
+    // return this.http.post<Movie>(`${this.apiBaseUrl}/`, movie);
   }
 
   // getMovies(): Observable<Movie[]> {
