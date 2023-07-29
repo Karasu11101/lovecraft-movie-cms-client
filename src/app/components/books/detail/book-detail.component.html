@@ -1,1 +1,36 @@
-<p>detail works!</p>
+<!-- <div class="book-detail-container">
+  <div class="main-div">
+    <button class="backButton" (click)="goBack()"><i class="pi pi-arrow-left"></i> Back</button>
+    <h2>{{book.title}}</h2>
+    <p>{{book.plot}}</p>
+  </div>
+  <div class="secondary-div">
+    <div class="img-div">
+      <img class="detail-image" src="{{book.image}}">
+    </div>
+    <div class="details-div">
+      <ul class="details-list">
+        <li>Title: <strong>{{book.title}}</strong></li>
+        <li>Published: <strong>{{book.published}}</strong></li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+
+<button class="backButton" (click)="goBack()"><i class="pi pi-arrow-left"></i> Back</button>
+
+<div class="detail-div">
+  <h2>{{book.title}}</h2>
+  <div class="img-div">
+    <img class="detail-image" src="{{book.image}}" style="float:right;">
+    <ul class="details-list">
+      <li>Title: <strong>{{book.title}}</strong></li>
+      <li>Published: <strong>{{book.published}}</strong></li>
+    </ul>
+  </div>
+
+  <div class="text-div">
+    <h4>Plot:</h4>
+    <p>{{book.plot}}</p>
+  </div>
+</div>

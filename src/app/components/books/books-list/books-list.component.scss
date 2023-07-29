@@ -5,6 +5,7 @@
 
   h2 {
     font-weight: 700;
+    color: $secondary-color-5;
   }
 
   h4 {
@@ -32,4 +33,31 @@
   .li-before {
     content: '';
   }
+}
+
+.loaderBackground {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  width: 100%;
+
+  img {
+    height: 120px;
+    width: 120px;
+  }
+
+  h3 {
+    color: $secondary-color-5;
+    font-weight: 900;
+    margin-top: 30px;
+  }
+
+}
+
+#addBook {
+  background-color: $primary-color-4;
+  margin-left: 10px;
+  border: none;
 }

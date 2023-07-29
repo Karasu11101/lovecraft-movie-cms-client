@@ -7,7 +7,7 @@
 .column {
 
   float: left;
-  padding: 10px;
+  // padding: 10px;
   height: 150px;
   white-space: nowrap;
 }
@@ -35,7 +35,7 @@
   .logo {
     vertical-align: middle;
     height: 40px;
-    padding-left: 10px;
+    // padding-left: 10px;
   }
 }
 
@@ -45,18 +45,6 @@
   text-align: right;
   padding-top: 60px;
   text-shadow: 0.4px 0.4px grey;
-
-  .pi {
-    font-size: 2rem;
-  }
-
-  .insta, .discord {
-    padding-right: 30px;
-  }
-
-  .twitter {
-    padding-right: 20px;
-  }
 }
 
 .middle {
@@ -72,10 +60,9 @@
     color: $secondary-color-1;
     text-shadow: 0.5px 0.5px grey;
     vertical-align: text-bottom!important;
-    padding-bottom: 60px;
     text-align: center;
     display: flex;
-
+    margin-right: 20px;
   }
 }
 
@@ -134,5 +121,20 @@ a {
   span:hover {
     color: white;
     font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .logo {
+    vertical-align: middle;
+    height: 30px;
+    padding-left: 10px;
+  }
+  .container-fluid {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
   }
 }

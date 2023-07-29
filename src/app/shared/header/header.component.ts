@@ -25,6 +25,8 @@ export class HeaderComponent implements DoCheck {
     if(JSON.parse(localStorage.getItem('user')) !== null) {
       this.user = JSON.parse(localStorage.getItem('user'));
       this.role = JSON.parse(localStorage.getItem('user')).role;
+    } else {
+      this.role = 'user';
     }
   }
 

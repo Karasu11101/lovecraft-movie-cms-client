@@ -42,6 +42,62 @@
   }
 }
 
+.admin-icon {
+  background-color: $primary-color-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .btn-admin {
+    color: $secondary-color-5;
+    border: none;
+    background-color: $primary-color-1;
+  }
+}
+
+.modal-header {
+  background-color: $secondary-color-1;
+  color: $secondary-color-5;
+  .btn-close {
+    color: $secondary-color-5
+  }
+  .btn-close:focus {
+    outline-style: none!important;
+    box-shadow: none!important;
+  }
+}
+.modal-body {
+  background-color: $primary-color-1;
+  color: $secondary-color-5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h4 {
+    text-align: center;
+  }
+  strong {
+    color: $primary-color-5;
+  }
+  .img-div {
+    text-align: center;
+  }
+  img {
+    height: 50%;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.modal-footer {
+  background-color: $secondary-color-1;
+  .btn-cancella {
+    background-color: $primary-color-4;
+    color: $secondary-color-5;
+  }
+  .btn-annulla {
+    color: $secondary-color-5;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .container-card {
     width: 30%;
