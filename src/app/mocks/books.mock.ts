@@ -10,7 +10,7 @@ export const BOOKS: Book[] = [
   },
   {
     _id: 2,
-    title: 'Thew Statement of Randolph Carter',
+    title: 'The Statement of Randolph Carter',
     plot: '"The Statement of Randolph Carter" is the first person testimony of the titular character, who has been found wandering through swampland in an amnesiac shock. In his statement, Carter attempts to explain the disappearance of his companion, the occultist Harley Warren. Warren has come into the possession of a book, written in an unknown language, the exact contents of which he never revealed to Carter. Carter mentions that Warren has other "strange, rare books on forbidden subjects", several of which are in Arabic. From his mysterious book, Warren apparently deduces that doors or stairways exist between the surface world, and the underworld. He encourages Carter to travel with him to the location of one such portal, an ancient graveyard near Big Cypress Swamp. Upon arriving, Warren locates a particular tomb, and opens it to reveal a staircase that descends into the earth. Taking a lantern, he leaves Carter on the surface, and follows the stairs into the darkness, communicating with his companion by a telephone wire. After several minutes of silence, Warren suddenly begins to make vague, panicked outbursts that culminate in a desperate plea for Carter to flee. Finally, after Warren is silent for several minutes, Carter calls to him down the line, only to hear an alien voice telling him that Warren is dead.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Weirdtales-1925-02-thestatementofrandolphcarter.jpg/800px-Weirdtales-1925-02-thestatementofrandolphcarter.jpg',
     published: 'May 1920'

@@ -36,6 +36,12 @@ button {
   color: $secondary-color-5!important;
   font-weight: 600;
   height: 30px;
+  display: flex;
+  align-items: center;
+  .pi-arrow-left {
+    padding-right: 5px;
+    font-size: 12px;
+  }
 }
 
 

@@ -14,12 +14,13 @@ import { BooksComponent } from './components/books/books.component';
 import { BookDetailComponent } from './components/books/detail/book-detail.component';
 import { NewBookComponent } from './components/books/new-book/new-book.component';
 import { BooksListComponent } from './components/books/books-list/books-list.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'movies', component: MoviesComponent, children: [
-    { path: 'dettaglio/:title/:_id', component: DetailComponent },
+    { path: 'detail/:title/:id', component: DetailComponent },
     { path: 'newMovie', component: NewMovieComponent },
     { path: '', component: MoviesListComponent, pathMatch: 'full' }
   ]},
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'contactUs', component: ContactsComponent},
   { path: '404', component: NotfoundComponent },
   { path: '**', redirectTo: '404', pathMatch: 'full' },
 ];

@@ -57,10 +57,11 @@ body {
   }
 
   .carousel-caption {
-    h3 {
+    a {
       font-family: 'Tulpen One', cursive;
       font-size: 40px;
       text-shadow: black 2px 3px 3px;
+      cursor: pointer;
     }
   }
 
@@ -138,6 +139,10 @@ body {
   font-size: 30px;
 }
 
+.offcanvas {
+  width: 200px!important;
+}
+
 .offcanvas-body {
   a {
     font-family: "Tulpen One", cursive !important;
@@ -169,12 +174,6 @@ body {
     text-shadow: 0.0px 0.0px 6px rgb(0, 0, 0)!important;
     font-weight: 400;
   }
-
-  // span:hover {
-  //   color: white!important;
-  //   text-shadow: 0.0px 0.0px 6px rgb(0, 0, 0)!important;
-  //   font-weight: 400;
-  // }
 }
 
 @media screen and (max-width: 550px) {
@@ -186,7 +185,37 @@ body {
   }
 
   .offcanvas {
-    width: 200px!important;
+    width: 150px!important;
   }
+}
 
+.fixed-top {
+  position: relative!important;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.offcanvas-backdrop {
+  display: none !important;
+}
+
+.ck.ck-editor__editable_inline[dir=ltr] {
+  text-align: left;
+  background-color: white;
+}
+
+.ck-editor__editable {
+  min-height: 400px!important;
+  max-width: 100%!important;
+}
+
+.ck.ck-toolbar.ck-toolbar_grouping>.ck-toolbar__items {
+  display: flex!important;
+  justify-content: space-around!important;
+}
+
+.description-input {
+  height: 300px;
 }

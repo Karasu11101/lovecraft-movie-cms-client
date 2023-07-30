@@ -2,11 +2,11 @@
 
 .bg-darker {
   background-color: $primary-color-2;
-  font-size: 60px;
+  font-size: 40px;
   color: black;
   text-shadow: 0.2px 0.2px grey;
   width: 100%;
-  height: 100%;
+  height: 446px;
   position: relative;
   left: 12px;
 }
@@ -32,6 +32,11 @@
   padding-top: 30px;
   width: 25%;
   white-space: nowrap!important;
+
+  a {
+    text-decoration: none;
+  color: $secondary-color-1;
+  }
 }
 
 .right {
@@ -57,6 +62,7 @@
     flex-wrap: nowrap;
     align-content: center;
     align-items: center;
+    height: 616px;
 }
 
   .middle[_ngcontent-ng-c1439495475] {

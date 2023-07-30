@@ -9,31 +9,31 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MoviesService {
 
-  apiBaseUrl = 'api/movies';
+  apiBaseUrl = '/lovecraft/movies';
   movieData = new ReplaySubject();
 
   constructor(private http: HttpClient) { }
 
   getMovies(): Observable<Movie[]> {
-    return of (MOVIES);
-    // return this.http.get<Movie[]>(`${this.apiBaseUrl}/`)
+    // return of (MOVIES);
+    return this.http.get<Movie[]>(`${this.apiBaseUrl}/list`)
   }
 
   getMoviesAsync() {
-    return of (MOVIES);
-    // return this.http.get<Movie[]>(`${this.apiBaseUrl}/`)
+    // return of (MOVIES);
+    return this.http.get<Movie[]>(`${this.apiBaseUrl}/list`)
   }
 
-  getMovie(id: string): Observable<Movie> {
-    const movie = MOVIES.find(movie => movie._id === Number(id));
-    return of (movie);
-    // return this.http.get<Movie>(`${this.apiBaseUrl}/${id}`)
+  getMovie(id: Number): Observable<Movie> {
+    // const movie = MOVIES.find(movie => movie._id === Number(id));
+    // return of (movie);
+    return this.http.get<Movie>(`${this.apiBaseUrl}/details/${id}`)
   }
 
-  createMovie(movie: Movie): Observable<Movie[]> {
-    MOVIES.push(movie);
-    return of (MOVIES);
-    // return this.http.post<Movie>(`${this.apiBaseUrl}/`, movie);
+  createMovie(movie: Movie): Observable<Movie> {
+    // MOVIES.push(movie);
+    // return of (MOVIES);
+    return this.http.post<Movie>(`${this.apiBaseUrl}/newMovie`, movie);
   }
 
   // getMovies(): Observable<Movie[]> {

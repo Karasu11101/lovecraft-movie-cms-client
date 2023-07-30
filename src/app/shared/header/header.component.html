@@ -27,7 +27,7 @@
 
   <nav class="navbar navbar-light bg-darker fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand">
         <img routerLink="home" src="../assets/images/cthulhu-logo2.png" alt="cthulhu logo" class="logo" index="logo-id">
       </a>
       <div id="title-header">
@@ -36,14 +36,15 @@
       <button id="menu-button" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span id="menu-span" class="navbar-toggler-icon"></span>
       </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" data-bs-scroll="true">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Eldritch Vault</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <a id="navbar-home" class="nav-link active" aria-current="page">Home</a>
+            <a id="navbar-home" class="nav-link active" routerLink="home" aria-current="page">Home</a>
             <a id="navbar-movies" class="nav-link" routerLink="movies">Movies</a>
+            <a id="navbar-movies" class="nav-link" routerLink="books">Books</a>
             <a id="navbar-signin" class="signin-button" *ngIf="!auth.isLogged()" (click)="open(modalLogin)" data-bs-dismiss="offcanvas">
                 Sign in
             </a>
@@ -62,69 +63,5 @@
 
 
 <ng-template id="loginModal" #modalLogin let-modal>
-
   <app-login></app-login>
-  <!-- <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button id="close" type="button" class="btn-close" aria-label="lose" (click)="modal.dismiss()"></button>
-      </div>
-      <div class="modal-body">
-        <section>
-          <div id="backgroundLogin">
-            <h2>Sign In</h2>
-            <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
-              <div class="row">
-                <label class="form-label" for="email">Username</label>
-                <input type="text" name="username" class="form-control" placeholder="Username" ngModel required="true">
-              </div>
-
-              <div class="row">
-                <label class="form-label" for="password">Password</label>
-                <p-password ngModel name="password" class="form-control" placeholder="Password" [toggleMask]="true" [feedback]="false" required="true">
-                </p-password>
-              </div>
-
-              <div class="row">
-                <button class="btn btn-primary">Sign In</button>
-              </div>
-              <div class="alert alert-danger" *ngIf="loginError">
-                {{loginError}}
-              </div>
-            </form>
-
-            <div id="registrati">
-              If you haven't already, you can sign up <a routerLink="/registration" data-dismiss="loginModal">here</a>
-            </div>
-          </div>
-        </section>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn-closeModal" aria-label="cancel" (click)="modal.dismiss()">CANCEL</button>
-        <button id="homeButton" type="button" class="btn btn-primary" aria-label="back to home" (click)="modal.close()">HOME</button>
-      </div>
-    </div>
-  </div> -->
 </ng-template>
-
-
-<!-- <ul id="header-ul" class="navbar-nav justify-content-end flex-grow-1 pe-3">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" routerLink="movies">Movies</a>
-  </li>
-  <li id="signup">
-    <a class="signin-button" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Sign in
-    </a>
-    <div *ngIf="!auth.isLogged()" class="inner-signup">
-      <ul>
-        <li><a class="nav-link" routerLink="profile" routerLinkActive="active">[ Profile</a></li>
-        <li> - </li>
-        <li><a class="nav-link" (click)="logout()" style="cursor: pointer">Log out ]</a></li>
-      </ul>
-    </div>
-  </li>
-</ul> -->

@@ -8,6 +8,7 @@ import { PaginatorModule } from 'primeng/paginator';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastModule } from 'primeng/toast';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +33,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { BooksComponent } from './components/books/books.component';
 import { NewBookComponent } from './components/books/new-book/new-book.component';
 import { BooksListComponent } from './components/books/books-list/books-list.component';
+import { BookDetailComponent } from './components/books/detail/book-detail.component';
 
 
 
@@ -58,8 +60,10 @@ import { BooksListComponent } from './components/books/books-list/books-list.com
     BooksComponent,
     NewBookComponent,
     BooksListComponent,
+    BookDetailComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,

@@ -1,13 +1,14 @@
 <div *ngIf="books$ | async" class="booksContainer">
   <h2>Feel free to browse our archive</h2>
   <div>
-    <h4>A-Z</h4>
+    <h4>A-Z <a *ngIf="role === '1411912'" id="addBook" class="btn btn-primary" routerLink="/books/newBook" routerLinkActive="active" appWhiteShadow>Insert new book</a></h4>
     <ul>
-      <li *ngFor="let book of allBooks"><a routerLink="/books/detail/{{book.title}}/{{book._id}}">{{book.title}}</a></li>
+      <li *ngFor="let book of allBooks"><a routerLink="/books/detail/{{book.title}}/{{book.id}}">{{book.title}}</a></li>
     </ul>
   </div>
 </div>
 
 <div class="loaderBackground" *ngIf="!allBooks.length" style="text-align: center">
-  <img src="../../../../assets/images/loading-cthulhu.gif" style="width:30%; height: 30%">
+  <img src="../../../../assets/images/cthulhu-eye.gif">
+  <h3>Looking for content...</h3>
 <div>

@@ -10,12 +10,13 @@
       <div class="row-login">
         <label class="form-label loginLabel" for="password">Password</label>
         <!-- <input type="password" name="password" class="form-control" placeholder="scrivi qui la tua password"> -->
-        <p-password ngModel name="password" class="form-control" placeholder="Password" [toggleMask]="true" [feedback]="false" required="true">
+        <p-password ngModel name="password" class="form-control" placeholder="Password" [toggleMask]="true" [feedback]="false" required="true"
+        styleClass="p-password p-component p-inputwrapper p-input-icon-right" [style]="{'width':'100%'}" [inputStyle]="{'width':'100%'}">
         </p-password>
       </div>
 
-      <div class="row-login">
-        <button class="btn btn-primary">Sign In</button>
+      <div class="row-login" style="align-items:center">
+        <button class="btn btn-primary" appWhiteShadow>Sign In</button>
       </div>
       <div class="alert alert-danger" *ngIf="loginError">
         {{loginError}}
@@ -23,7 +24,7 @@
     </form>
 
     <div class="register">
-      If you haven't already, you can sign up <a routerLink="/registration">here</a>
+      <span class="text">If you haven't already, you can sign up <a routerLink="/registration">here</a>.</span>
     </div>
   </div>
 </section>
