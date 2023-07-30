@@ -30,6 +30,14 @@ export class MoviesListComponent implements OnInit {
     }
   }
 
+  // ngDoCheck(): void {
+  //   if(JSON.parse(localStorage.getItem('user')) !== null) {
+  //     this.user = JSON.parse(localStorage.getItem('user'));
+  //     this.role = JSON.parse(localStorage.getItem('user')).role;
+  //     console.log(this.role);
+  //   }
+  // }
+
   onGetMovies() {
     this.moviesService.getMovies().subscribe({
       next: (res) => {
