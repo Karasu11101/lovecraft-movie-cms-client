@@ -33,6 +33,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { BooksComponent } from './components/books/books.component';
 import { NewBookComponent } from './components/books/new-book/new-book.component';
 import { BooksListComponent } from './components/books/books-list/books-list.component';
+import { BookDetailComponent } from './components/books/detail/book-detail.component';
 
 
 
@@ -59,6 +60,7 @@ import { BooksListComponent } from './components/books/books-list/books-list.com
     BooksComponent,
     NewBookComponent,
     BooksListComponent,
+    BookDetailComponent
   ],
   imports: [
     CommonModule,

@@ -11,20 +11,20 @@ export class UserService {
   userData = new ReplaySubject();
   userRole = new ReplaySubject();
 
-  apiBaseUrl = 'api/users';
+  apiBaseUrl = 'http://localhost:8080/lovecraft/user';
 
   constructor(private http: HttpClient) { }
 
-  createUser(user: User): Observable<User[]> {
-    USERS.push(user);
-    return of (USERS);
-    // return this.http.post<User>(`${this.apiBaseUrl}/signup`, user);
+  createUser(user: User): Observable<User> {
+    // USERS.push(user);
+    // return of (USERS);
+    return this.http.post<User>(`${this.apiBaseUrl}/registration`, user);
   }
 
-  getUser(email: string): Observable<User> {
-    const user = USERS.find(user => user.email === email);
-    return of (user);
-    // const data = {email: email};
-    // return this.http.post<User>(`${this.apiBaseUrl}/user`, data);
+  getUser(username: string): Observable<User> {
+    // const user = USERS.find(user => user.email === email);
+    // return of (user);
+    // const data = {username: username};
+    return this.http.get<User>(`${this.apiBaseUrl}/details/${username}`);
   }
 }

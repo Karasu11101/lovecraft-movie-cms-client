@@ -9,7 +9,7 @@
             <h5 id="full-title" class="card-title">{{movie.title}}</h5>
           </div>
           <p class="card-text">{{movie.description | slice: 0:accorciaTesto(movie.description)}}...</p>
-          <a routerLink="/movies/dettaglio/{{movie.title}}/{{movie._id}}" class="btn btn-primary" appButtonShadow>Delve deeper</a>
+          <a routerLink="/movies/detail/{{movie.title}}/{{movie._id}}" class="btn btn-primary" appButtonShadow>Delve deeper</a>
           <!-- <a [routerLink]="'dettaglio/'+recipe._id" class="btn btn-primary">Visualizza</a> -->
         </div>
         <div *ngIf="role === '1411912'" class="admin-icon">

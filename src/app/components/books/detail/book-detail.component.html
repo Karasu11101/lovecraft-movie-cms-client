@@ -19,7 +19,7 @@
 
 <button class="backButton" (click)="goBack()"><i class="pi pi-arrow-left"></i> Back</button>
 
-<div class="detail-div">
+<div *ngIf="book" class="detail-div">
   <h2>{{book.title}}</h2>
   <div class="img-div">
     <img class="detail-image" src="{{book.image}}" style="float:right;">

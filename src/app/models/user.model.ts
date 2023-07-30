@@ -7,5 +7,6 @@ export interface User {
   dateOfBirth: string,
   password: string,
   role?: string,
-  createdAt?: string
+  createdAt?: string,
+  version?: number
 }

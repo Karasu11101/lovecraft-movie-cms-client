@@ -26,8 +26,8 @@ export class DetailComponent implements OnInit {
     }
 
     onGetMovies(): void {
-      const id = this.activatedRoute.snapshot.paramMap.get('_id');
-      this.moviesService.getMovie(id).pipe(
+      const id = this.activatedRoute.snapshot.paramMap.get('id');
+      this.moviesService.getMovie(Number(id)).pipe(
         first()
       ).subscribe({
         next: (res) => {

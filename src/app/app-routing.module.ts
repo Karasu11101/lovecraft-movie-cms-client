@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'movies', component: MoviesComponent, children: [
-    { path: 'dettaglio/:title/:_id', component: DetailComponent },
+    { path: 'detail/:title/:id', component: DetailComponent },
     { path: 'newMovie', component: NewMovieComponent },
     { path: '', component: MoviesListComponent, pathMatch: 'full' }
   ]},
